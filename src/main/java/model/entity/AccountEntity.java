@@ -9,6 +9,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table( name = "account" )
+@SequenceGenerator( name = "seq", sequenceName = "seq_account" )
 @AttributeOverride(name = "id", column = @Column( name = "account_id" ) )
 public class AccountEntity  extends BaseEntity{
 

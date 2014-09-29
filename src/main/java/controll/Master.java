@@ -20,6 +20,7 @@ public class Master {
 
         AccountService accountService=wojtekService.getAccountService();
         List<AccountEntity> list=accountService.getAll();
+
         for(AccountEntity l:list){
             System.out.println(l.getName());
         }

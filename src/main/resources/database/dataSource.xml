@@ -5,7 +5,7 @@
 
     <bean
          class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-        <property name="location" value="properties/database.properties"/>
+        <property name="location" value="properties/database/database.properties"/>
     </bean>
 
     <bean id="dataSource"

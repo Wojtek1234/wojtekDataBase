@@ -14,7 +14,7 @@ import java.util.List;
 public class BaseDao<T> {
 
 
-    @PersistenceUnit(unitName = "Wojtek")
+    @PersistenceContext()
     protected EntityManager entityManager;
 
 
