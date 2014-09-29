@@ -2,11 +2,14 @@ package model.entity;
 
 import model.entity.base.BaseEntity;
 
-import javax.persistence.Column;
+import javax.persistence.*;
 
 /**
  * Created by w.maciejewski on 2014-09-29.
  */
+@Entity
+@Table( name = "account" )
+@AttributeOverride(name = "id", column = @Column( name = "account_id" ) )
 public class AccountEntity  extends BaseEntity{
 
 
