@@ -277,3 +277,129 @@ Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Err
 2014-09-29 15:26:10 INFO  LobCreatorBuilder:120 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
 2014-09-29 15:26:10 INFO  TransactionFactoryInitiator:68 - HHH000399: Using default transaction strategy (direct JDBC transactions)
 2014-09-29 15:26:10 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2014-09-29 15:28:22 INFO  ClassPathXmlApplicationContext:510 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@16c75ed: startup date [Mon Sep 29 15:28:22 CEST 2014]; root of context hierarchy
+2014-09-29 15:28:22 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [beanConfiguration.xml]
+2014-09-29 15:28:22 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [database/dataSource.xml]
+2014-09-29 15:28:22 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [database/hibernate.xml]
+2014-09-29 15:28:22 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [beans.xml]
+2014-09-29 15:28:23 INFO  ClassPathBeanDefinitionScanner:230 - JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+2014-09-29 15:28:23 INFO  PropertyPlaceholderConfigurer:177 - Loading properties file from class path resource [properties/database.properties]
+2014-09-29 15:28:23 INFO  AutowiredAnnotationBeanPostProcessor:140 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2014-09-29 15:28:23 INFO  DriverManagerDataSource:153 - Loaded JDBC driver: org.postgresql.Driver
+2014-09-29 15:28:23 INFO  LocalContainerEntityManagerFactoryBean:283 - Building JPA container EntityManagerFactory for persistence unit 'myPu'
+2014-09-29 15:28:23 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2014-09-29 15:28:23 INFO  Version:41 - HHH000412: Hibernate Core {4.2.0.Final}
+2014-09-29 15:28:23 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2014-09-29 15:28:23 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2014-09-29 15:28:23 INFO  Ejb3Configuration:528 - HHH000204: Processing PersistenceUnitInfo [
+	name: myPu
+	...]
+2014-09-29 15:28:23 INFO  DefaultListableBeanFactory:444 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@11dca9: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sessionFactory,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,wojtekServiceBean,accountDao,accountService,transactionManager,entityManagerFactory,jpaAdapter,org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2014-09-29 15:30:10 INFO  ClassPathXmlApplicationContext:510 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@83de21: startup date [Mon Sep 29 15:30:10 CEST 2014]; root of context hierarchy
+2014-09-29 15:30:10 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [beanConfiguration.xml]
+2014-09-29 15:30:10 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [database/dataSource.xml]
+2014-09-29 15:30:10 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [database/hibernate.xml]
+2014-09-29 15:30:10 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [beans.xml]
+2014-09-29 15:30:10 INFO  ClassPathBeanDefinitionScanner:230 - JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+2014-09-29 15:30:10 INFO  PropertyPlaceholderConfigurer:177 - Loading properties file from class path resource [properties/database.properties]
+2014-09-29 15:30:10 INFO  AutowiredAnnotationBeanPostProcessor:140 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2014-09-29 15:30:10 INFO  DriverManagerDataSource:153 - Loaded JDBC driver: org.postgresql.Driver
+2014-09-29 15:30:10 INFO  LocalContainerEntityManagerFactoryBean:283 - Building JPA container EntityManagerFactory for persistence unit 'myPu'
+2014-09-29 15:30:11 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2014-09-29 15:30:11 INFO  Version:41 - HHH000412: Hibernate Core {4.2.0.Final}
+2014-09-29 15:30:11 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2014-09-29 15:30:11 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2014-09-29 15:30:11 INFO  Ejb3Configuration:528 - HHH000204: Processing PersistenceUnitInfo [
+	name: myPu
+	...]
+2014-09-29 15:30:11 INFO  DefaultListableBeanFactory:444 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@11dca9: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sessionFactory,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,wojtekServiceBean,accountDao,accountService,transactionManager,entityManagerFactory,jpaAdapter,org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2014-09-29 15:30:49 INFO  ClassPathXmlApplicationContext:510 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@83de21: startup date [Mon Sep 29 15:30:49 CEST 2014]; root of context hierarchy
+2014-09-29 15:30:49 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [beanConfiguration.xml]
+2014-09-29 15:30:49 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [database/dataSource.xml]
+2014-09-29 15:30:49 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [database/hibernate.xml]
+2014-09-29 15:30:49 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [beans.xml]
+2014-09-29 15:30:49 INFO  ClassPathBeanDefinitionScanner:230 - JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+2014-09-29 15:30:49 INFO  PropertyPlaceholderConfigurer:177 - Loading properties file from class path resource [properties/database.properties]
+2014-09-29 15:30:49 INFO  AutowiredAnnotationBeanPostProcessor:140 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2014-09-29 15:30:49 INFO  DriverManagerDataSource:153 - Loaded JDBC driver: org.postgresql.Driver
+2014-09-29 15:30:49 INFO  LocalContainerEntityManagerFactoryBean:283 - Building JPA container EntityManagerFactory for persistence unit 'myPu'
+2014-09-29 15:30:49 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2014-09-29 15:30:49 INFO  Version:41 - HHH000412: Hibernate Core {4.2.0.Final}
+2014-09-29 15:30:49 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2014-09-29 15:30:49 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2014-09-29 15:30:49 INFO  Ejb3Configuration:528 - HHH000204: Processing PersistenceUnitInfo [
+	name: myPu
+	...]
+2014-09-29 15:30:49 INFO  DefaultListableBeanFactory:444 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@11dca9: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sessionFactory,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,wojtekServiceBean,accountDao,accountService,transactionManager,entityManagerFactory,jpaAdapter,org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2014-09-29 15:39:28 INFO  ClassPathXmlApplicationContext:510 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@83de21: startup date [Mon Sep 29 15:39:28 CEST 2014]; root of context hierarchy
+2014-09-29 15:39:28 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [beanConfiguration.xml]
+2014-09-29 15:39:28 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [database/dataSource.xml]
+2014-09-29 15:39:28 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [database/hibernate.xml]
+2014-09-29 15:39:29 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [beans.xml]
+2014-09-29 15:39:29 INFO  ClassPathBeanDefinitionScanner:230 - JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+2014-09-29 15:39:29 INFO  PropertyPlaceholderConfigurer:177 - Loading properties file from class path resource [properties/database.properties]
+2014-09-29 15:39:29 INFO  AutowiredAnnotationBeanPostProcessor:140 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2014-09-29 15:39:29 INFO  DriverManagerDataSource:153 - Loaded JDBC driver: org.postgresql.Driver
+2014-09-29 15:39:29 INFO  LocalContainerEntityManagerFactoryBean:283 - Building JPA container EntityManagerFactory for persistence unit 'dupa'
+2014-09-29 15:39:29 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2014-09-29 15:39:29 INFO  Version:41 - HHH000412: Hibernate Core {4.2.0.Final}
+2014-09-29 15:39:29 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2014-09-29 15:39:29 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2014-09-29 15:39:29 INFO  Ejb3Configuration:528 - HHH000204: Processing PersistenceUnitInfo [
+	name: dupa
+	...]
+2014-09-29 15:39:29 INFO  DefaultListableBeanFactory:444 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@11dca9: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sessionFactory,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,wojtekServiceBean,accountDao,accountService,transactionManager,entityManagerFactory,jpaAdapter,org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2014-09-29 15:43:34 INFO  ClassPathXmlApplicationContext:510 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@83de21: startup date [Mon Sep 29 15:43:34 CEST 2014]; root of context hierarchy
+2014-09-29 15:43:34 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [beanConfiguration.xml]
+2014-09-29 15:43:35 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [database/dataSource.xml]
+2014-09-29 15:43:35 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [database/hibernate.xml]
+2014-09-29 15:43:35 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [beans.xml]
+2014-09-29 15:43:35 INFO  ClassPathBeanDefinitionScanner:230 - JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+2014-09-29 15:43:35 INFO  PropertyPlaceholderConfigurer:177 - Loading properties file from class path resource [properties/database.properties]
+2014-09-29 15:43:35 INFO  AutowiredAnnotationBeanPostProcessor:140 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2014-09-29 15:43:35 INFO  DriverManagerDataSource:153 - Loaded JDBC driver: org.postgresql.Driver
+2014-09-29 15:43:35 INFO  LocalContainerEntityManagerFactoryBean:283 - Building JPA container EntityManagerFactory for persistence unit 'accountTest'
+2014-09-29 15:43:35 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2014-09-29 15:43:35 INFO  Version:41 - HHH000412: Hibernate Core {4.2.0.Final}
+2014-09-29 15:43:35 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2014-09-29 15:43:35 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2014-09-29 15:43:35 INFO  Ejb3Configuration:528 - HHH000204: Processing PersistenceUnitInfo [
+	name: accountTest
+	...]
+2014-09-29 15:43:35 INFO  DefaultListableBeanFactory:444 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@11dca9: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sessionFactory,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,wojtekServiceBean,accountDao,accountService,transactionManager,entityManagerFactory,jpaAdapter,org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2014-09-29 15:48:07 INFO  ClassPathXmlApplicationContext:510 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1b2380e: startup date [Mon Sep 29 15:48:07 CEST 2014]; root of context hierarchy
+2014-09-29 15:48:07 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [beanConfiguration.xml]
+2014-09-29 15:48:07 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [database/dataSource.xml]
+2014-09-29 15:48:07 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [database/hibernate.xml]
+2014-09-29 15:48:07 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [beans.xml]
+2014-09-29 15:48:07 INFO  ClassPathBeanDefinitionScanner:230 - JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+2014-09-29 15:48:08 INFO  PropertyPlaceholderConfigurer:177 - Loading properties file from class path resource [properties/database.properties]
+2014-09-29 15:48:08 INFO  AutowiredAnnotationBeanPostProcessor:140 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2014-09-29 15:48:08 INFO  DriverManagerDataSource:153 - Loaded JDBC driver: org.postgresql.Driver
+2014-09-29 15:48:08 INFO  LocalContainerEntityManagerFactoryBean:283 - Building JPA container EntityManagerFactory for persistence unit 'accountTest'
+2014-09-29 15:48:08 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2014-09-29 15:48:08 INFO  Version:41 - HHH000412: Hibernate Core {4.2.0.Final}
+2014-09-29 15:48:08 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2014-09-29 15:48:08 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2014-09-29 15:48:08 INFO  Ejb3Configuration:528 - HHH000204: Processing PersistenceUnitInfo [
+	name: accountTest
+	...]
+2014-09-29 15:48:08 INFO  DefaultListableBeanFactory:444 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@adff2f: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sessionFactory,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,wojtekServiceBean,accountDao,accountService,transactionManager,entityManagerFactory,jpaAdapter,org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2014-09-29 15:49:11 INFO  ClassPathXmlApplicationContext:510 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@16c75ed: startup date [Mon Sep 29 15:49:11 CEST 2014]; root of context hierarchy
+2014-09-29 15:49:11 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [beanConfiguration.xml]
+2014-09-29 15:49:11 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [database/dataSource.xml]
+2014-09-29 15:49:11 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [database/hibernate.xml]
+2014-09-29 15:49:11 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [beans.xml]
+2014-09-29 15:49:11 INFO  ClassPathBeanDefinitionScanner:230 - JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+2014-09-29 15:49:12 INFO  PropertyPlaceholderConfigurer:177 - Loading properties file from class path resource [properties/database.properties]
+2014-09-29 15:49:12 INFO  AutowiredAnnotationBeanPostProcessor:140 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2014-09-29 15:49:12 INFO  DriverManagerDataSource:153 - Loaded JDBC driver: org.postgresql.Driver
+2014-09-29 15:49:12 INFO  LocalContainerEntityManagerFactoryBean:283 - Building JPA container EntityManagerFactory for persistence unit 'accountTest'
+2014-09-29 15:49:12 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2014-09-29 15:49:12 INFO  Version:41 - HHH000412: Hibernate Core {4.2.0.Final}
+2014-09-29 15:49:12 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2014-09-29 15:49:12 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2014-09-29 15:49:12 INFO  Ejb3Configuration:528 - HHH000204: Processing PersistenceUnitInfo [
+	name: accountTest
+	...]
+2014-09-29 15:49:12 INFO  DefaultListableBeanFactory:444 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@11dca9: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sessionFactory,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,wojtekServiceBean,accountDao,accountService,transactionManager,entityManagerFactory,jpaAdapter,org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
