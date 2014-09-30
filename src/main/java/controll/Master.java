@@ -2,7 +2,7 @@ package controll;
 
 import model.entity.AccountEntity;
 import model.service.AccountService;
-import model.service.WojtekService;
+import model.service.MainServiceBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -15,10 +15,10 @@ public class Master {
 
     public Master(){
         ApplicationContext context = new ClassPathXmlApplicationContext( "beanConfiguration.xml" );
-        WojtekService wojtekService = (WojtekService)context.getBean( "wojtekServiceBean" );
+        MainServiceBean mainServiceBean = (MainServiceBean)context.getBean( "mainServiceBean" );
 
 
-        AccountService accountService=wojtekService.getAccountService();
+        AccountService accountService= mainServiceBean.getAccountService();
         List<AccountEntity> list=accountService.getAll();
 
         for(AccountEntity l:list){

@@ -5,7 +5,8 @@ import javax.inject.Inject;
 /**
  * Created by w.maciejewski on 2014-09-29.
  */
-public class WojtekService {
+public class MainServiceBean
+{
 
 
     private AccountService accountService;
