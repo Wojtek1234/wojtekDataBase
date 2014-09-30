@@ -19,6 +19,7 @@
 
         <property name="accountService" ref="accountService"/>
         <property name="categoryService" ref="categoryService"/>
+        <property name="offerService" ref="offerService"/>
 
     </bean>
 
@@ -39,6 +40,16 @@
     <bean id="categoryService" class="model.service.CategoryService">
         <property name="categoryDao" ref="categoryDao"/>
     </bean>
+
+    <bean id="offerDao" class="model.dao.OfferDao">
+        <constructor-arg value="model.entity.OfferEntity"/>
+    </bean>
+    <bean id="offerService" class="model.service.OfferService">
+        <property name="offerDao" ref="offerDao"/>
+    </bean>
+
+
+
 
     <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
         <property name="entityManagerFactory" ref="entityManagerFactory"/>

@@ -3,6 +3,8 @@ package model.entity;
 import model.entity.base.BaseEntity;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Created by w.maciejewski on 2014-09-30.
@@ -13,6 +15,11 @@ import javax.persistence.*;
 @SequenceGenerator( name = "seq", sequenceName = "seq_category" )
 @AttributeOverride(name = "id", column = @Column( name = "category_id" ) )
 public class CategoryEntity extends BaseEntity {
+
+
+
+    @OneToMany( mappedBy = "category" )
+    private Set<OfferEntity> offerEntitySet = new HashSet<>();
 
     @Column( name = "category_name" )
     private String name;
