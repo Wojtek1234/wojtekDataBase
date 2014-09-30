@@ -9,7 +9,8 @@ public class WojtekService {
 
 
     private AccountService accountService;
-
+    private CategoryService categoryService;
+    private OfferService offerService;
 
     public AccountService getAccountService()
     {
@@ -22,4 +23,16 @@ public class WojtekService {
         this.accountService = accountService;
     }
 
+    public CategoryService getCategoryService() {
+        return categoryService;
+    }
+    @Inject
+    public void setCategoryService(CategoryService categoryService) {
+        this.categoryService = categoryService;
+    }
+
+    @Inject
+    public OfferService getOfferService() {
+        return offerService;
+    }
 }

@@ -85,4 +85,10 @@ public abstract class BaseService  <E extends BaseEntity, T extends BaseDao<E>> 
         return this.getBaseDao().contains( entity );
     }
 
+    @Transactional
+    public void removeAll()
+    {
+        this.getBaseDao().removeAll();
+    }
+
 }

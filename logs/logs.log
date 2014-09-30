@@ -785,3 +785,569 @@ Caused by: org.hibernate.AnnotationException: Unknown Id.generator: seq
 2014-09-29 20:37:30 INFO  GenericApplicationContext:1042 - Closing org.springframework.context.support.GenericApplicationContext@1376afa: startup date [Mon Sep 29 20:37:28 CEST 2014]; root of context hierarchy
 2014-09-29 20:37:30 INFO  DefaultListableBeanFactory:444 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@f032fa: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sessionFactory,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,wojtekServiceBean,accountDao,accountService,transactionManager,entityManagerFactory,jpaAdapter,org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
 2014-09-29 20:37:30 INFO  LocalContainerEntityManagerFactoryBean:441 - Closing JPA EntityManagerFactory for persistence unit 'Wojtek'
+2014-09-30 08:31:16 INFO  ClassPathXmlApplicationContext:510 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@83de21: startup date [Tue Sep 30 08:31:16 CEST 2014]; root of context hierarchy
+2014-09-30 08:31:17 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [beanConfiguration.xml]
+2014-09-30 08:31:17 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [database/dataSource.xml]
+2014-09-30 08:31:17 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [database/hibernate.xml]
+2014-09-30 08:31:17 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [beans.xml]
+2014-09-30 08:31:17 INFO  ClassPathBeanDefinitionScanner:230 - JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+2014-09-30 08:31:18 INFO  PropertyPlaceholderConfigurer:177 - Loading properties file from class path resource [properties/database/database.properties]
+2014-09-30 08:31:18 INFO  AutowiredAnnotationBeanPostProcessor:140 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2014-09-30 08:31:18 INFO  DriverManagerDataSource:153 - Loaded JDBC driver: org.postgresql.Driver
+2014-09-30 08:31:18 INFO  LocalContainerEntityManagerFactoryBean:283 - Building JPA container EntityManagerFactory for persistence unit 'Wojtek'
+2014-09-30 08:31:18 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2014-09-30 08:31:18 INFO  Version:41 - HHH000412: Hibernate Core {4.2.0.Final}
+2014-09-30 08:31:18 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2014-09-30 08:31:18 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2014-09-30 08:31:18 INFO  Ejb3Configuration:528 - HHH000204: Processing PersistenceUnitInfo [
+	name: Wojtek
+	...]
+2014-09-30 08:31:18 INFO  ConnectionProviderInitiator:188 - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2014-09-30 08:31:19 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2014-09-30 08:31:19 INFO  LobCreatorBuilder:120 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2014-09-30 08:31:19 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2014-09-30 08:31:19 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2014-09-30 08:31:19 INFO  DefaultListableBeanFactory:577 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@adff2f: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sessionFactory,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,wojtekServiceBean,accountDao,accountService,transactionManager,entityManagerFactory,jpaAdapter,org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2014-09-30 08:31:20 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2014-09-30 08:31:20 INFO  LobCreatorBuilder:120 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2014-09-30 08:31:20 INFO  TransactionFactoryInitiator:68 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2014-09-30 08:31:20 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2014-09-30 08:31:47 INFO  ClassPathXmlApplicationContext:510 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@16c75ed: startup date [Tue Sep 30 08:31:47 CEST 2014]; root of context hierarchy
+2014-09-30 08:31:47 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [beanConfiguration.xml]
+2014-09-30 08:31:47 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [database/dataSource.xml]
+2014-09-30 08:31:47 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [database/hibernate.xml]
+2014-09-30 08:31:48 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [beans.xml]
+2014-09-30 08:31:48 INFO  ClassPathBeanDefinitionScanner:230 - JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+2014-09-30 08:31:48 INFO  PropertyPlaceholderConfigurer:177 - Loading properties file from class path resource [properties/database/database.properties]
+2014-09-30 08:31:48 INFO  AutowiredAnnotationBeanPostProcessor:140 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2014-09-30 08:31:48 INFO  DriverManagerDataSource:153 - Loaded JDBC driver: org.postgresql.Driver
+2014-09-30 08:31:48 INFO  LocalContainerEntityManagerFactoryBean:283 - Building JPA container EntityManagerFactory for persistence unit 'Wojtek'
+2014-09-30 08:31:48 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2014-09-30 08:31:48 INFO  Version:41 - HHH000412: Hibernate Core {4.2.0.Final}
+2014-09-30 08:31:48 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2014-09-30 08:31:48 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2014-09-30 08:31:48 INFO  Ejb3Configuration:528 - HHH000204: Processing PersistenceUnitInfo [
+	name: Wojtek
+	...]
+2014-09-30 08:31:48 INFO  ConnectionProviderInitiator:188 - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2014-09-30 08:31:48 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2014-09-30 08:31:48 INFO  LobCreatorBuilder:120 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2014-09-30 08:31:48 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2014-09-30 08:31:48 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2014-09-30 08:31:48 INFO  DefaultListableBeanFactory:577 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@adff2f: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sessionFactory,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,wojtekServiceBean,accountDao,accountService,transactionManager,entityManagerFactory,jpaAdapter,org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2014-09-30 08:31:49 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2014-09-30 08:31:49 INFO  LobCreatorBuilder:120 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2014-09-30 08:31:49 INFO  TransactionFactoryInitiator:68 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2014-09-30 08:31:49 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2014-09-30 08:32:10 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [test/beanConfiguration-test.xml]
+2014-09-30 08:32:10 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [test/database/dataSource-test.xml]
+2014-09-30 08:32:10 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [database/hibernate.xml]
+2014-09-30 08:32:10 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [beans.xml]
+2014-09-30 08:32:10 INFO  ClassPathBeanDefinitionScanner:230 - JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+2014-09-30 08:32:10 INFO  GenericApplicationContext:510 - Refreshing org.springframework.context.support.GenericApplicationContext@1e5052b: startup date [Tue Sep 30 08:32:10 CEST 2014]; root of context hierarchy
+2014-09-30 08:32:10 INFO  PropertyPlaceholderConfigurer:177 - Loading properties file from class path resource [test/properties/database-test.properties]
+2014-09-30 08:32:10 INFO  AutowiredAnnotationBeanPostProcessor:140 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2014-09-30 08:32:10 INFO  DriverManagerDataSource:153 - Loaded JDBC driver: org.postgresql.Driver
+2014-09-30 08:32:10 INFO  LocalContainerEntityManagerFactoryBean:283 - Building JPA container EntityManagerFactory for persistence unit 'Wojtek'
+2014-09-30 08:32:10 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2014-09-30 08:32:10 INFO  Version:41 - HHH000412: Hibernate Core {4.2.0.Final}
+2014-09-30 08:32:10 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2014-09-30 08:32:10 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2014-09-30 08:32:10 INFO  Ejb3Configuration:528 - HHH000204: Processing PersistenceUnitInfo [
+	name: Wojtek
+	...]
+2014-09-30 08:32:10 INFO  ConnectionProviderInitiator:188 - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2014-09-30 08:32:11 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2014-09-30 08:32:11 INFO  LobCreatorBuilder:120 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2014-09-30 08:32:11 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2014-09-30 08:32:11 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2014-09-30 08:32:11 INFO  DefaultListableBeanFactory:577 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1d62ac4: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sessionFactory,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,wojtekServiceBean,accountDao,accountService,transactionManager,entityManagerFactory,jpaAdapter,org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2014-09-30 08:32:11 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2014-09-30 08:32:11 INFO  LobCreatorBuilder:120 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2014-09-30 08:32:11 INFO  TransactionFactoryInitiator:68 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2014-09-30 08:32:11 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2014-09-30 08:32:11 WARN  CglibAopProxy:259 - Unable to proxy method [public final void org.springframework.test.context.junit4.AbstractJUnit4SpringContextTests.setApplicationContext(org.springframework.context.ApplicationContext)] because it is final: All calls to this method via a proxy will be routed directly to the proxy.
+2014-09-30 08:32:12 WARN  SqlExceptionHelper:143 - SQL Error: 0, SQLState: 42P01
+2014-09-30 08:32:12 ERROR SqlExceptionHelper:144 - BŁĄD: relacja "seq_account" nie istnieje
+  Pozycja: 17
+2014-09-30 08:32:12 INFO  GenericApplicationContext:1042 - Closing org.springframework.context.support.GenericApplicationContext@1e5052b: startup date [Tue Sep 30 08:32:10 CEST 2014]; root of context hierarchy
+2014-09-30 08:32:12 INFO  DefaultListableBeanFactory:444 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1d62ac4: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sessionFactory,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,wojtekServiceBean,accountDao,accountService,transactionManager,entityManagerFactory,jpaAdapter,org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2014-09-30 08:32:12 INFO  LocalContainerEntityManagerFactoryBean:441 - Closing JPA EntityManagerFactory for persistence unit 'Wojtek'
+2014-09-30 08:34:52 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [test/beanConfiguration-test.xml]
+2014-09-30 08:34:52 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [test/database/dataSource-test.xml]
+2014-09-30 08:34:52 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [database/hibernate.xml]
+2014-09-30 08:34:52 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [beans.xml]
+2014-09-30 08:34:52 INFO  ClassPathBeanDefinitionScanner:230 - JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+2014-09-30 08:34:52 INFO  GenericApplicationContext:510 - Refreshing org.springframework.context.support.GenericApplicationContext@dc0b2f: startup date [Tue Sep 30 08:34:52 CEST 2014]; root of context hierarchy
+2014-09-30 08:34:52 INFO  PropertyPlaceholderConfigurer:177 - Loading properties file from class path resource [test/properties/database-test.properties]
+2014-09-30 08:34:52 INFO  AutowiredAnnotationBeanPostProcessor:140 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2014-09-30 08:34:53 INFO  DriverManagerDataSource:153 - Loaded JDBC driver: org.postgresql.Driver
+2014-09-30 08:34:53 INFO  LocalContainerEntityManagerFactoryBean:283 - Building JPA container EntityManagerFactory for persistence unit 'Wojtek'
+2014-09-30 08:34:53 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2014-09-30 08:34:53 INFO  Version:41 - HHH000412: Hibernate Core {4.2.0.Final}
+2014-09-30 08:34:53 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2014-09-30 08:34:53 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2014-09-30 08:34:53 INFO  Ejb3Configuration:528 - HHH000204: Processing PersistenceUnitInfo [
+	name: Wojtek
+	...]
+2014-09-30 08:34:53 INFO  ConnectionProviderInitiator:188 - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2014-09-30 08:34:53 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2014-09-30 08:34:53 INFO  LobCreatorBuilder:120 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2014-09-30 08:34:53 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2014-09-30 08:34:53 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2014-09-30 08:34:54 INFO  DefaultListableBeanFactory:577 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1665da4: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sessionFactory,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,wojtekServiceBean,accountDao,accountService,transactionManager,entityManagerFactory,jpaAdapter,org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2014-09-30 08:34:54 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2014-09-30 08:34:54 INFO  LobCreatorBuilder:120 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2014-09-30 08:34:54 INFO  TransactionFactoryInitiator:68 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2014-09-30 08:34:54 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2014-09-30 08:34:54 WARN  CglibAopProxy:259 - Unable to proxy method [public final void org.springframework.test.context.junit4.AbstractJUnit4SpringContextTests.setApplicationContext(org.springframework.context.ApplicationContext)] because it is final: All calls to this method via a proxy will be routed directly to the proxy.
+2014-09-30 08:35:11 WARN  SqlExceptionHelper:143 - SQL Error: 0, SQLState: 42P01
+2014-09-30 08:35:11 ERROR SqlExceptionHelper:144 - BŁĄD: relacja "seq_account" nie istnieje
+  Pozycja: 17
+2014-09-30 08:35:11 INFO  GenericApplicationContext:1042 - Closing org.springframework.context.support.GenericApplicationContext@dc0b2f: startup date [Tue Sep 30 08:34:52 CEST 2014]; root of context hierarchy
+2014-09-30 08:35:11 INFO  DefaultListableBeanFactory:444 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1665da4: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sessionFactory,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,wojtekServiceBean,accountDao,accountService,transactionManager,entityManagerFactory,jpaAdapter,org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2014-09-30 08:35:11 INFO  LocalContainerEntityManagerFactoryBean:441 - Closing JPA EntityManagerFactory for persistence unit 'Wojtek'
+2014-09-30 09:12:36 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [test/beanConfiguration-test.xml]
+2014-09-30 09:12:36 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [test/database/dataSource-test.xml]
+2014-09-30 09:12:36 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [database/hibernate.xml]
+2014-09-30 09:12:36 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [beans.xml]
+2014-09-30 09:12:36 INFO  ClassPathBeanDefinitionScanner:230 - JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+2014-09-30 09:12:36 INFO  GenericApplicationContext:510 - Refreshing org.springframework.context.support.GenericApplicationContext@b65a68: startup date [Tue Sep 30 09:12:36 CEST 2014]; root of context hierarchy
+2014-09-30 09:12:37 INFO  PropertyPlaceholderConfigurer:177 - Loading properties file from class path resource [test/properties/database-test.properties]
+2014-09-30 09:12:37 INFO  AutowiredAnnotationBeanPostProcessor:140 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2014-09-30 09:12:37 INFO  DriverManagerDataSource:153 - Loaded JDBC driver: org.postgresql.Driver
+2014-09-30 09:12:37 INFO  LocalContainerEntityManagerFactoryBean:283 - Building JPA container EntityManagerFactory for persistence unit 'Wojtek'
+2014-09-30 09:12:37 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2014-09-30 09:12:37 INFO  Version:41 - HHH000412: Hibernate Core {4.2.0.Final}
+2014-09-30 09:12:37 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2014-09-30 09:12:37 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2014-09-30 09:12:37 INFO  Ejb3Configuration:528 - HHH000204: Processing PersistenceUnitInfo [
+	name: Wojtek
+	...]
+2014-09-30 09:12:37 INFO  ConnectionProviderInitiator:188 - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2014-09-30 09:12:37 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2014-09-30 09:12:37 INFO  LobCreatorBuilder:120 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2014-09-30 09:12:37 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2014-09-30 09:12:37 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2014-09-30 09:12:38 INFO  DefaultListableBeanFactory:577 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@191c88c: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sessionFactory,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,wojtekServiceBean,accountDao,accountService,transactionManager,entityManagerFactory,jpaAdapter,org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2014-09-30 09:12:38 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2014-09-30 09:12:38 INFO  LobCreatorBuilder:120 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2014-09-30 09:12:38 INFO  TransactionFactoryInitiator:68 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2014-09-30 09:12:38 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2014-09-30 09:12:38 WARN  CglibAopProxy:259 - Unable to proxy method [public final void org.springframework.test.context.junit4.AbstractJUnit4SpringContextTests.setApplicationContext(org.springframework.context.ApplicationContext)] because it is final: All calls to this method via a proxy will be routed directly to the proxy.
+2014-09-30 09:12:38 INFO  GenericApplicationContext:1042 - Closing org.springframework.context.support.GenericApplicationContext@b65a68: startup date [Tue Sep 30 09:12:36 CEST 2014]; root of context hierarchy
+2014-09-30 09:12:38 INFO  DefaultListableBeanFactory:444 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@191c88c: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sessionFactory,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,wojtekServiceBean,accountDao,accountService,transactionManager,entityManagerFactory,jpaAdapter,org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2014-09-30 09:12:38 INFO  LocalContainerEntityManagerFactoryBean:441 - Closing JPA EntityManagerFactory for persistence unit 'Wojtek'
+2014-09-30 09:38:17 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [test/beanConfiguration-test.xml]
+2014-09-30 09:38:17 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [test/database/dataSource-test.xml]
+2014-09-30 09:38:17 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [database/hibernate.xml]
+2014-09-30 09:38:17 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [beans.xml]
+2014-09-30 09:38:17 INFO  ClassPathBeanDefinitionScanner:230 - JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+2014-09-30 09:38:17 INFO  GenericApplicationContext:510 - Refreshing org.springframework.context.support.GenericApplicationContext@6bc73b: startup date [Tue Sep 30 09:38:17 CEST 2014]; root of context hierarchy
+2014-09-30 09:38:17 INFO  PropertyPlaceholderConfigurer:177 - Loading properties file from class path resource [test/properties/database-test.properties]
+2014-09-30 09:38:17 INFO  AutowiredAnnotationBeanPostProcessor:140 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2014-09-30 09:38:17 INFO  DriverManagerDataSource:153 - Loaded JDBC driver: org.postgresql.Driver
+2014-09-30 09:38:17 INFO  LocalContainerEntityManagerFactoryBean:283 - Building JPA container EntityManagerFactory for persistence unit 'Wojtek'
+2014-09-30 09:38:17 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2014-09-30 09:38:17 INFO  Version:41 - HHH000412: Hibernate Core {4.2.0.Final}
+2014-09-30 09:38:17 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2014-09-30 09:38:17 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2014-09-30 09:38:17 INFO  Ejb3Configuration:528 - HHH000204: Processing PersistenceUnitInfo [
+	name: Wojtek
+	...]
+2014-09-30 09:38:17 INFO  ConnectionProviderInitiator:188 - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2014-09-30 09:38:18 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2014-09-30 09:38:18 INFO  LobCreatorBuilder:120 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2014-09-30 09:38:18 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2014-09-30 09:38:18 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2014-09-30 09:38:18 INFO  DefaultListableBeanFactory:577 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@15c60c8: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sessionFactory,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,wojtekServiceBean,accountDao,accountService,transactionManager,entityManagerFactory,jpaAdapter,org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2014-09-30 09:38:18 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2014-09-30 09:38:18 INFO  LobCreatorBuilder:120 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2014-09-30 09:38:18 INFO  TransactionFactoryInitiator:68 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2014-09-30 09:38:18 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2014-09-30 09:38:18 WARN  CglibAopProxy:259 - Unable to proxy method [public final void org.springframework.test.context.junit4.AbstractJUnit4SpringContextTests.setApplicationContext(org.springframework.context.ApplicationContext)] because it is final: All calls to this method via a proxy will be routed directly to the proxy.
+2014-09-30 09:38:18 INFO  GenericApplicationContext:1042 - Closing org.springframework.context.support.GenericApplicationContext@6bc73b: startup date [Tue Sep 30 09:38:17 CEST 2014]; root of context hierarchy
+2014-09-30 09:38:18 INFO  DefaultListableBeanFactory:444 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@15c60c8: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sessionFactory,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,wojtekServiceBean,accountDao,accountService,transactionManager,entityManagerFactory,jpaAdapter,org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2014-09-30 09:38:18 INFO  LocalContainerEntityManagerFactoryBean:441 - Closing JPA EntityManagerFactory for persistence unit 'Wojtek'
+2014-09-30 11:42:53 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [test/beanConfiguration-test.xml]
+2014-09-30 11:42:53 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [test/database/dataSource-test.xml]
+2014-09-30 11:42:53 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [database/hibernate.xml]
+2014-09-30 11:42:53 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [beans.xml]
+2014-09-30 11:42:53 INFO  ClassPathBeanDefinitionScanner:230 - JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+2014-09-30 11:42:53 INFO  GenericApplicationContext:510 - Refreshing org.springframework.context.support.GenericApplicationContext@566b3e: startup date [Tue Sep 30 11:42:53 CEST 2014]; root of context hierarchy
+2014-09-30 11:42:53 INFO  PropertyPlaceholderConfigurer:177 - Loading properties file from class path resource [test/properties/database-test.properties]
+2014-09-30 11:42:53 INFO  AutowiredAnnotationBeanPostProcessor:140 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2014-09-30 11:42:54 INFO  DriverManagerDataSource:153 - Loaded JDBC driver: org.postgresql.Driver
+2014-09-30 11:42:54 INFO  LocalContainerEntityManagerFactoryBean:283 - Building JPA container EntityManagerFactory for persistence unit 'Wojtek'
+2014-09-30 11:42:54 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2014-09-30 11:42:54 INFO  Version:41 - HHH000412: Hibernate Core {4.2.0.Final}
+2014-09-30 11:42:54 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2014-09-30 11:42:54 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2014-09-30 11:42:54 INFO  Ejb3Configuration:528 - HHH000204: Processing PersistenceUnitInfo [
+	name: Wojtek
+	...]
+2014-09-30 11:42:54 INFO  ConnectionProviderInitiator:188 - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2014-09-30 11:42:54 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2014-09-30 11:42:54 INFO  LobCreatorBuilder:120 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2014-09-30 11:42:54 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2014-09-30 11:42:54 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2014-09-30 11:42:55 INFO  DefaultListableBeanFactory:577 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@12fd2db: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sessionFactory,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,wojtekServiceBean,accountDao,accountService,categoryDao,categoryService,transactionManager,entityManagerFactory,jpaAdapter,org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2014-09-30 11:42:55 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2014-09-30 11:42:55 INFO  LobCreatorBuilder:120 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2014-09-30 11:42:55 INFO  TransactionFactoryInitiator:68 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2014-09-30 11:42:55 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2014-09-30 11:42:55 WARN  CglibAopProxy:259 - Unable to proxy method [public final void org.springframework.test.context.junit4.AbstractJUnit4SpringContextTests.setApplicationContext(org.springframework.context.ApplicationContext)] because it is final: All calls to this method via a proxy will be routed directly to the proxy.
+2014-09-30 11:42:55 INFO  GenericApplicationContext:1042 - Closing org.springframework.context.support.GenericApplicationContext@566b3e: startup date [Tue Sep 30 11:42:53 CEST 2014]; root of context hierarchy
+2014-09-30 11:42:55 INFO  DefaultListableBeanFactory:444 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@12fd2db: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sessionFactory,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,wojtekServiceBean,accountDao,accountService,categoryDao,categoryService,transactionManager,entityManagerFactory,jpaAdapter,org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2014-09-30 11:42:55 INFO  LocalContainerEntityManagerFactoryBean:441 - Closing JPA EntityManagerFactory for persistence unit 'Wojtek'
+2014-09-30 11:54:50 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [test/beanConfiguration-test.xml]
+2014-09-30 11:54:50 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [test/database/dataSource-test.xml]
+2014-09-30 11:54:50 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [database/hibernate.xml]
+2014-09-30 11:54:50 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [beans.xml]
+2014-09-30 11:54:50 INFO  ClassPathBeanDefinitionScanner:230 - JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+2014-09-30 11:54:51 INFO  GenericApplicationContext:510 - Refreshing org.springframework.context.support.GenericApplicationContext@566b3e: startup date [Tue Sep 30 11:54:51 CEST 2014]; root of context hierarchy
+2014-09-30 11:54:51 INFO  PropertyPlaceholderConfigurer:177 - Loading properties file from class path resource [test/properties/database-test.properties]
+2014-09-30 11:54:51 INFO  AutowiredAnnotationBeanPostProcessor:140 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2014-09-30 11:54:51 INFO  DriverManagerDataSource:153 - Loaded JDBC driver: org.postgresql.Driver
+2014-09-30 11:54:51 INFO  LocalContainerEntityManagerFactoryBean:283 - Building JPA container EntityManagerFactory for persistence unit 'Wojtek'
+2014-09-30 11:54:51 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2014-09-30 11:54:51 INFO  Version:41 - HHH000412: Hibernate Core {4.2.0.Final}
+2014-09-30 11:54:51 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2014-09-30 11:54:51 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2014-09-30 11:54:51 INFO  Ejb3Configuration:528 - HHH000204: Processing PersistenceUnitInfo [
+	name: Wojtek
+	...]
+2014-09-30 11:54:51 INFO  ConnectionProviderInitiator:188 - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2014-09-30 11:54:51 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2014-09-30 11:54:51 INFO  LobCreatorBuilder:120 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2014-09-30 11:54:51 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2014-09-30 11:54:51 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2014-09-30 11:54:51 INFO  DefaultListableBeanFactory:577 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@139e9f8: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sessionFactory,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,wojtekServiceBean,accountDao,accountService,categoryDao,categoryService,transactionManager,entityManagerFactory,jpaAdapter,org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2014-09-30 11:54:52 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2014-09-30 11:54:52 INFO  LobCreatorBuilder:120 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2014-09-30 11:54:52 INFO  TransactionFactoryInitiator:68 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2014-09-30 11:54:52 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2014-09-30 11:54:52 WARN  CglibAopProxy:259 - Unable to proxy method [public final void org.springframework.test.context.junit4.AbstractJUnit4SpringContextTests.setApplicationContext(org.springframework.context.ApplicationContext)] because it is final: All calls to this method via a proxy will be routed directly to the proxy.
+2014-09-30 11:54:52 WARN  SqlExceptionHelper:143 - SQL Error: 0, SQLState: 23505
+2014-09-30 11:54:52 ERROR SqlExceptionHelper:144 - BŁĄD: podwójna wartość klucza narusza ograniczenie unikalności "cat_name"
+  Szczegóły: Klucz (category_name)=(kategoriaTestowa) już istnieje.
+2014-09-30 11:54:52 INFO  AbstractBatchImpl:195 - HHH000010: On release of batch it still contained JDBC statements
+2014-09-30 11:54:52 INFO  GenericApplicationContext:1042 - Closing org.springframework.context.support.GenericApplicationContext@566b3e: startup date [Tue Sep 30 11:54:51 CEST 2014]; root of context hierarchy
+2014-09-30 11:54:52 INFO  DefaultListableBeanFactory:444 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@139e9f8: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sessionFactory,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,wojtekServiceBean,accountDao,accountService,categoryDao,categoryService,transactionManager,entityManagerFactory,jpaAdapter,org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2014-09-30 11:54:52 INFO  LocalContainerEntityManagerFactoryBean:441 - Closing JPA EntityManagerFactory for persistence unit 'Wojtek'
+2014-09-30 12:08:14 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [test/beanConfiguration-test.xml]
+2014-09-30 12:08:14 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [test/database/dataSource-test.xml]
+2014-09-30 12:08:14 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [database/hibernate.xml]
+2014-09-30 12:08:14 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [beans.xml]
+2014-09-30 12:08:14 INFO  ClassPathBeanDefinitionScanner:230 - JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+2014-09-30 12:08:14 INFO  GenericApplicationContext:510 - Refreshing org.springframework.context.support.GenericApplicationContext@284ac3: startup date [Tue Sep 30 12:08:14 CEST 2014]; root of context hierarchy
+2014-09-30 12:08:14 INFO  PropertyPlaceholderConfigurer:177 - Loading properties file from class path resource [test/properties/database-test.properties]
+2014-09-30 12:08:14 INFO  AutowiredAnnotationBeanPostProcessor:140 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2014-09-30 12:08:14 INFO  DriverManagerDataSource:153 - Loaded JDBC driver: org.postgresql.Driver
+2014-09-30 12:08:14 INFO  LocalContainerEntityManagerFactoryBean:283 - Building JPA container EntityManagerFactory for persistence unit 'Wojtek'
+2014-09-30 12:08:14 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2014-09-30 12:08:14 INFO  Version:41 - HHH000412: Hibernate Core {4.2.0.Final}
+2014-09-30 12:08:14 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2014-09-30 12:08:14 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2014-09-30 12:08:15 INFO  Ejb3Configuration:528 - HHH000204: Processing PersistenceUnitInfo [
+	name: Wojtek
+	...]
+2014-09-30 12:08:15 INFO  ConnectionProviderInitiator:188 - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2014-09-30 12:08:15 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2014-09-30 12:08:15 INFO  LobCreatorBuilder:120 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2014-09-30 12:08:15 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2014-09-30 12:08:15 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2014-09-30 12:08:15 INFO  DefaultListableBeanFactory:577 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@b59fd9: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sessionFactory,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,wojtekServiceBean,accountDao,accountService,categoryDao,categoryService,transactionManager,entityManagerFactory,jpaAdapter,org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2014-09-30 12:08:15 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2014-09-30 12:08:15 INFO  LobCreatorBuilder:120 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2014-09-30 12:08:15 INFO  TransactionFactoryInitiator:68 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2014-09-30 12:08:15 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2014-09-30 12:08:15 WARN  CglibAopProxy:259 - Unable to proxy method [public final void org.springframework.test.context.junit4.AbstractJUnit4SpringContextTests.setApplicationContext(org.springframework.context.ApplicationContext)] because it is final: All calls to this method via a proxy will be routed directly to the proxy.
+2014-09-30 12:08:16 WARN  SqlExceptionHelper:143 - SQL Error: 0, SQLState: 23505
+2014-09-30 12:08:16 ERROR SqlExceptionHelper:144 - BŁĄD: podwójna wartość klucza narusza ograniczenie unikalności "cat_name"
+  Szczegóły: Klucz (category_name)=(kategoriaTestowa) już istnieje.
+2014-09-30 12:08:16 INFO  AbstractBatchImpl:195 - HHH000010: On release of batch it still contained JDBC statements
+2014-09-30 12:08:16 INFO  GenericApplicationContext:1042 - Closing org.springframework.context.support.GenericApplicationContext@284ac3: startup date [Tue Sep 30 12:08:14 CEST 2014]; root of context hierarchy
+2014-09-30 12:08:16 INFO  DefaultListableBeanFactory:444 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@b59fd9: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sessionFactory,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,wojtekServiceBean,accountDao,accountService,categoryDao,categoryService,transactionManager,entityManagerFactory,jpaAdapter,org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2014-09-30 12:08:16 INFO  LocalContainerEntityManagerFactoryBean:441 - Closing JPA EntityManagerFactory for persistence unit 'Wojtek'
+2014-09-30 12:10:44 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [test/beanConfiguration-test.xml]
+2014-09-30 12:10:44 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [test/database/dataSource-test.xml]
+2014-09-30 12:10:44 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [database/hibernate.xml]
+2014-09-30 12:10:44 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [beans.xml]
+2014-09-30 12:10:44 INFO  ClassPathBeanDefinitionScanner:230 - JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+2014-09-30 12:10:44 INFO  GenericApplicationContext:510 - Refreshing org.springframework.context.support.GenericApplicationContext@1490621: startup date [Tue Sep 30 12:10:44 CEST 2014]; root of context hierarchy
+2014-09-30 12:10:45 INFO  PropertyPlaceholderConfigurer:177 - Loading properties file from class path resource [test/properties/database-test.properties]
+2014-09-30 12:10:45 INFO  AutowiredAnnotationBeanPostProcessor:140 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2014-09-30 12:10:45 INFO  DriverManagerDataSource:153 - Loaded JDBC driver: org.postgresql.Driver
+2014-09-30 12:10:45 INFO  LocalContainerEntityManagerFactoryBean:283 - Building JPA container EntityManagerFactory for persistence unit 'Wojtek'
+2014-09-30 12:10:45 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2014-09-30 12:10:45 INFO  Version:41 - HHH000412: Hibernate Core {4.2.0.Final}
+2014-09-30 12:10:45 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2014-09-30 12:10:45 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2014-09-30 12:10:45 INFO  Ejb3Configuration:528 - HHH000204: Processing PersistenceUnitInfo [
+	name: Wojtek
+	...]
+2014-09-30 12:10:45 INFO  ConnectionProviderInitiator:188 - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2014-09-30 12:10:45 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2014-09-30 12:10:45 INFO  LobCreatorBuilder:120 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2014-09-30 12:10:45 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2014-09-30 12:10:45 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2014-09-30 12:10:46 INFO  DefaultListableBeanFactory:577 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1433d17: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sessionFactory,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,wojtekServiceBean,accountDao,accountService,categoryDao,categoryService,transactionManager,entityManagerFactory,jpaAdapter,org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2014-09-30 12:10:46 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2014-09-30 12:10:46 INFO  LobCreatorBuilder:120 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2014-09-30 12:10:46 INFO  TransactionFactoryInitiator:68 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2014-09-30 12:10:46 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2014-09-30 12:10:46 WARN  CglibAopProxy:259 - Unable to proxy method [public final void org.springframework.test.context.junit4.AbstractJUnit4SpringContextTests.setApplicationContext(org.springframework.context.ApplicationContext)] because it is final: All calls to this method via a proxy will be routed directly to the proxy.
+2014-09-30 12:11:07 WARN  SqlExceptionHelper:143 - SQL Error: 0, SQLState: 23505
+2014-09-30 12:11:07 ERROR SqlExceptionHelper:144 - BŁĄD: podwójna wartość klucza narusza ograniczenie unikalności "cat_name"
+  Szczegóły: Klucz (category_name)=(kategoriaTestowa) już istnieje.
+2014-09-30 12:11:07 INFO  AbstractBatchImpl:195 - HHH000010: On release of batch it still contained JDBC statements
+2014-09-30 12:11:26 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [test/beanConfiguration-test.xml]
+2014-09-30 12:11:26 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [test/database/dataSource-test.xml]
+2014-09-30 12:11:26 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [database/hibernate.xml]
+2014-09-30 12:11:26 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [beans.xml]
+2014-09-30 12:11:26 INFO  ClassPathBeanDefinitionScanner:230 - JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+2014-09-30 12:11:26 INFO  GenericApplicationContext:510 - Refreshing org.springframework.context.support.GenericApplicationContext@1ee1b66: startup date [Tue Sep 30 12:11:26 CEST 2014]; root of context hierarchy
+2014-09-30 12:11:26 INFO  PropertyPlaceholderConfigurer:177 - Loading properties file from class path resource [test/properties/database-test.properties]
+2014-09-30 12:11:26 INFO  AutowiredAnnotationBeanPostProcessor:140 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2014-09-30 12:11:26 INFO  DriverManagerDataSource:153 - Loaded JDBC driver: org.postgresql.Driver
+2014-09-30 12:11:26 INFO  LocalContainerEntityManagerFactoryBean:283 - Building JPA container EntityManagerFactory for persistence unit 'Wojtek'
+2014-09-30 12:11:26 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2014-09-30 12:11:26 INFO  Version:41 - HHH000412: Hibernate Core {4.2.0.Final}
+2014-09-30 12:11:26 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2014-09-30 12:11:26 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2014-09-30 12:11:26 INFO  Ejb3Configuration:528 - HHH000204: Processing PersistenceUnitInfo [
+	name: Wojtek
+	...]
+2014-09-30 12:11:26 INFO  ConnectionProviderInitiator:188 - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2014-09-30 12:11:27 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2014-09-30 12:11:27 INFO  LobCreatorBuilder:120 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2014-09-30 12:11:27 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2014-09-30 12:11:27 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2014-09-30 12:11:27 INFO  DefaultListableBeanFactory:577 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@25c793: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sessionFactory,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,wojtekServiceBean,accountDao,accountService,categoryDao,categoryService,transactionManager,entityManagerFactory,jpaAdapter,org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2014-09-30 12:11:27 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2014-09-30 12:11:27 INFO  LobCreatorBuilder:120 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2014-09-30 12:11:27 INFO  TransactionFactoryInitiator:68 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2014-09-30 12:11:27 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2014-09-30 12:11:27 WARN  CglibAopProxy:259 - Unable to proxy method [public final void org.springframework.test.context.junit4.AbstractJUnit4SpringContextTests.setApplicationContext(org.springframework.context.ApplicationContext)] because it is final: All calls to this method via a proxy will be routed directly to the proxy.
+2014-09-30 12:11:39 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [test/beanConfiguration-test.xml]
+2014-09-30 12:11:39 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [test/database/dataSource-test.xml]
+2014-09-30 12:11:39 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [database/hibernate.xml]
+2014-09-30 12:11:39 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [beans.xml]
+2014-09-30 12:11:39 INFO  ClassPathBeanDefinitionScanner:230 - JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+2014-09-30 12:11:39 INFO  GenericApplicationContext:510 - Refreshing org.springframework.context.support.GenericApplicationContext@c13a99: startup date [Tue Sep 30 12:11:39 CEST 2014]; root of context hierarchy
+2014-09-30 12:11:39 INFO  PropertyPlaceholderConfigurer:177 - Loading properties file from class path resource [test/properties/database-test.properties]
+2014-09-30 12:11:39 INFO  AutowiredAnnotationBeanPostProcessor:140 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2014-09-30 12:11:40 INFO  DriverManagerDataSource:153 - Loaded JDBC driver: org.postgresql.Driver
+2014-09-30 12:11:40 INFO  LocalContainerEntityManagerFactoryBean:283 - Building JPA container EntityManagerFactory for persistence unit 'Wojtek'
+2014-09-30 12:11:40 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2014-09-30 12:11:40 INFO  Version:41 - HHH000412: Hibernate Core {4.2.0.Final}
+2014-09-30 12:11:40 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2014-09-30 12:11:40 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2014-09-30 12:11:40 INFO  Ejb3Configuration:528 - HHH000204: Processing PersistenceUnitInfo [
+	name: Wojtek
+	...]
+2014-09-30 12:11:40 INFO  ConnectionProviderInitiator:188 - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2014-09-30 12:11:40 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2014-09-30 12:11:40 INFO  LobCreatorBuilder:120 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2014-09-30 12:11:40 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2014-09-30 12:11:40 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2014-09-30 12:11:41 INFO  DefaultListableBeanFactory:577 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@25c793: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sessionFactory,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,wojtekServiceBean,accountDao,accountService,categoryDao,categoryService,transactionManager,entityManagerFactory,jpaAdapter,org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2014-09-30 12:11:41 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2014-09-30 12:11:41 INFO  LobCreatorBuilder:120 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2014-09-30 12:11:41 INFO  TransactionFactoryInitiator:68 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2014-09-30 12:11:41 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2014-09-30 12:11:41 WARN  CglibAopProxy:259 - Unable to proxy method [public final void org.springframework.test.context.junit4.AbstractJUnit4SpringContextTests.setApplicationContext(org.springframework.context.ApplicationContext)] because it is final: All calls to this method via a proxy will be routed directly to the proxy.
+2014-09-30 12:12:13 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [test/beanConfiguration-test.xml]
+2014-09-30 12:12:13 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [test/database/dataSource-test.xml]
+2014-09-30 12:12:13 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [database/hibernate.xml]
+2014-09-30 12:12:13 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [beans.xml]
+2014-09-30 12:12:13 INFO  ClassPathBeanDefinitionScanner:230 - JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+2014-09-30 12:12:13 INFO  GenericApplicationContext:510 - Refreshing org.springframework.context.support.GenericApplicationContext@14481bb: startup date [Tue Sep 30 12:12:13 CEST 2014]; root of context hierarchy
+2014-09-30 12:12:13 INFO  PropertyPlaceholderConfigurer:177 - Loading properties file from class path resource [test/properties/database-test.properties]
+2014-09-30 12:12:13 INFO  AutowiredAnnotationBeanPostProcessor:140 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2014-09-30 12:12:13 INFO  DriverManagerDataSource:153 - Loaded JDBC driver: org.postgresql.Driver
+2014-09-30 12:12:13 INFO  LocalContainerEntityManagerFactoryBean:283 - Building JPA container EntityManagerFactory for persistence unit 'Wojtek'
+2014-09-30 12:12:13 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2014-09-30 12:12:13 INFO  Version:41 - HHH000412: Hibernate Core {4.2.0.Final}
+2014-09-30 12:12:13 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2014-09-30 12:12:14 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2014-09-30 12:12:14 INFO  Ejb3Configuration:528 - HHH000204: Processing PersistenceUnitInfo [
+	name: Wojtek
+	...]
+2014-09-30 12:12:21 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [test/beanConfiguration-test.xml]
+2014-09-30 12:12:21 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [test/database/dataSource-test.xml]
+2014-09-30 12:12:21 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [database/hibernate.xml]
+2014-09-30 12:12:21 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [beans.xml]
+2014-09-30 12:12:21 INFO  ClassPathBeanDefinitionScanner:230 - JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+2014-09-30 12:12:21 INFO  GenericApplicationContext:510 - Refreshing org.springframework.context.support.GenericApplicationContext@284ac3: startup date [Tue Sep 30 12:12:21 CEST 2014]; root of context hierarchy
+2014-09-30 12:12:21 INFO  PropertyPlaceholderConfigurer:177 - Loading properties file from class path resource [test/properties/database-test.properties]
+2014-09-30 12:12:21 INFO  AutowiredAnnotationBeanPostProcessor:140 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2014-09-30 12:12:21 INFO  DriverManagerDataSource:153 - Loaded JDBC driver: org.postgresql.Driver
+2014-09-30 12:12:21 INFO  LocalContainerEntityManagerFactoryBean:283 - Building JPA container EntityManagerFactory for persistence unit 'Wojtek'
+2014-09-30 12:12:22 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2014-09-30 12:12:22 INFO  Version:41 - HHH000412: Hibernate Core {4.2.0.Final}
+2014-09-30 12:12:22 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2014-09-30 12:12:22 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2014-09-30 12:12:22 INFO  Ejb3Configuration:528 - HHH000204: Processing PersistenceUnitInfo [
+	name: Wojtek
+	...]
+2014-09-30 12:12:22 INFO  ConnectionProviderInitiator:188 - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2014-09-30 12:12:22 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2014-09-30 12:12:22 INFO  LobCreatorBuilder:120 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2014-09-30 12:12:22 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2014-09-30 12:12:22 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2014-09-30 12:12:22 INFO  DefaultListableBeanFactory:577 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@b59fd9: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sessionFactory,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,wojtekServiceBean,accountDao,accountService,categoryDao,categoryService,transactionManager,entityManagerFactory,jpaAdapter,org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2014-09-30 12:12:22 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2014-09-30 12:12:22 INFO  LobCreatorBuilder:120 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2014-09-30 12:12:22 INFO  TransactionFactoryInitiator:68 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2014-09-30 12:12:22 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2014-09-30 12:12:22 WARN  CglibAopProxy:259 - Unable to proxy method [public final void org.springframework.test.context.junit4.AbstractJUnit4SpringContextTests.setApplicationContext(org.springframework.context.ApplicationContext)] because it is final: All calls to this method via a proxy will be routed directly to the proxy.
+2014-09-30 12:12:23 WARN  SqlExceptionHelper:143 - SQL Error: 0, SQLState: 23505
+2014-09-30 12:12:23 ERROR SqlExceptionHelper:144 - BŁĄD: podwójna wartość klucza narusza ograniczenie unikalności "cat_name"
+  Szczegóły: Klucz (category_name)=(kategoriaTestowa) już istnieje.
+2014-09-30 12:12:23 INFO  AbstractBatchImpl:195 - HHH000010: On release of batch it still contained JDBC statements
+2014-09-30 12:12:23 WARN  SqlExceptionHelper:143 - SQL Error: 0, SQLState: 23505
+2014-09-30 12:12:23 ERROR SqlExceptionHelper:144 - BŁĄD: podwójna wartość klucza narusza ograniczenie unikalności "cat_name"
+  Szczegóły: Klucz (category_name)=(kategoriaTestowa) już istnieje.
+2014-09-30 12:12:23 INFO  AbstractBatchImpl:195 - HHH000010: On release of batch it still contained JDBC statements
+2014-09-30 12:12:23 INFO  GenericApplicationContext:1042 - Closing org.springframework.context.support.GenericApplicationContext@284ac3: startup date [Tue Sep 30 12:12:21 CEST 2014]; root of context hierarchy
+2014-09-30 12:12:23 INFO  DefaultListableBeanFactory:444 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@b59fd9: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sessionFactory,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,wojtekServiceBean,accountDao,accountService,categoryDao,categoryService,transactionManager,entityManagerFactory,jpaAdapter,org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2014-09-30 12:12:23 INFO  LocalContainerEntityManagerFactoryBean:441 - Closing JPA EntityManagerFactory for persistence unit 'Wojtek'
+2014-09-30 12:13:16 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [test/beanConfiguration-test.xml]
+2014-09-30 12:13:16 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [test/database/dataSource-test.xml]
+2014-09-30 12:13:16 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [database/hibernate.xml]
+2014-09-30 12:13:16 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [beans.xml]
+2014-09-30 12:13:16 INFO  ClassPathBeanDefinitionScanner:230 - JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+2014-09-30 12:13:16 INFO  GenericApplicationContext:510 - Refreshing org.springframework.context.support.GenericApplicationContext@6fb3d6: startup date [Tue Sep 30 12:13:16 CEST 2014]; root of context hierarchy
+2014-09-30 12:13:16 INFO  PropertyPlaceholderConfigurer:177 - Loading properties file from class path resource [test/properties/database-test.properties]
+2014-09-30 12:13:16 INFO  AutowiredAnnotationBeanPostProcessor:140 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2014-09-30 12:13:16 INFO  DriverManagerDataSource:153 - Loaded JDBC driver: org.postgresql.Driver
+2014-09-30 12:13:16 INFO  LocalContainerEntityManagerFactoryBean:283 - Building JPA container EntityManagerFactory for persistence unit 'Wojtek'
+2014-09-30 12:13:16 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2014-09-30 12:13:16 INFO  Version:41 - HHH000412: Hibernate Core {4.2.0.Final}
+2014-09-30 12:13:16 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2014-09-30 12:13:16 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2014-09-30 12:13:16 INFO  Ejb3Configuration:528 - HHH000204: Processing PersistenceUnitInfo [
+	name: Wojtek
+	...]
+2014-09-30 12:13:17 INFO  ConnectionProviderInitiator:188 - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2014-09-30 12:13:17 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2014-09-30 12:13:17 INFO  LobCreatorBuilder:120 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2014-09-30 12:13:17 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2014-09-30 12:13:17 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2014-09-30 12:13:17 INFO  DefaultListableBeanFactory:577 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@aee668: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sessionFactory,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,wojtekServiceBean,accountDao,accountService,categoryDao,categoryService,transactionManager,entityManagerFactory,jpaAdapter,org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2014-09-30 12:13:17 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2014-09-30 12:13:17 INFO  LobCreatorBuilder:120 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2014-09-30 12:13:17 INFO  TransactionFactoryInitiator:68 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2014-09-30 12:13:17 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2014-09-30 12:13:17 WARN  CglibAopProxy:259 - Unable to proxy method [public final void org.springframework.test.context.junit4.AbstractJUnit4SpringContextTests.setApplicationContext(org.springframework.context.ApplicationContext)] because it is final: All calls to this method via a proxy will be routed directly to the proxy.
+2014-09-30 12:13:17 WARN  SqlExceptionHelper:143 - SQL Error: 0, SQLState: 23505
+2014-09-30 12:13:17 ERROR SqlExceptionHelper:144 - BŁĄD: podwójna wartość klucza narusza ograniczenie unikalności "cat_name"
+  Szczegóły: Klucz (category_name)=(kategoriaTestowa) już istnieje.
+2014-09-30 12:13:17 INFO  AbstractBatchImpl:195 - HHH000010: On release of batch it still contained JDBC statements
+2014-09-30 12:13:18 WARN  SqlExceptionHelper:143 - SQL Error: 0, SQLState: 23505
+2014-09-30 12:13:18 ERROR SqlExceptionHelper:144 - BŁĄD: podwójna wartość klucza narusza ograniczenie unikalności "cat_name"
+  Szczegóły: Klucz (category_name)=(kategoriaTestowa) już istnieje.
+2014-09-30 12:13:18 INFO  AbstractBatchImpl:195 - HHH000010: On release of batch it still contained JDBC statements
+2014-09-30 12:13:18 INFO  GenericApplicationContext:1042 - Closing org.springframework.context.support.GenericApplicationContext@6fb3d6: startup date [Tue Sep 30 12:13:16 CEST 2014]; root of context hierarchy
+2014-09-30 12:13:18 INFO  DefaultListableBeanFactory:444 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@aee668: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sessionFactory,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,wojtekServiceBean,accountDao,accountService,categoryDao,categoryService,transactionManager,entityManagerFactory,jpaAdapter,org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2014-09-30 12:13:18 INFO  LocalContainerEntityManagerFactoryBean:441 - Closing JPA EntityManagerFactory for persistence unit 'Wojtek'
+2014-09-30 12:13:22 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [test/beanConfiguration-test.xml]
+2014-09-30 12:13:22 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [test/database/dataSource-test.xml]
+2014-09-30 12:13:22 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [database/hibernate.xml]
+2014-09-30 12:13:22 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [beans.xml]
+2014-09-30 12:13:22 INFO  ClassPathBeanDefinitionScanner:230 - JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+2014-09-30 12:13:22 INFO  GenericApplicationContext:510 - Refreshing org.springframework.context.support.GenericApplicationContext@825459: startup date [Tue Sep 30 12:13:22 CEST 2014]; root of context hierarchy
+2014-09-30 12:13:22 INFO  PropertyPlaceholderConfigurer:177 - Loading properties file from class path resource [test/properties/database-test.properties]
+2014-09-30 12:13:22 INFO  AutowiredAnnotationBeanPostProcessor:140 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2014-09-30 12:13:22 INFO  DriverManagerDataSource:153 - Loaded JDBC driver: org.postgresql.Driver
+2014-09-30 12:13:22 INFO  LocalContainerEntityManagerFactoryBean:283 - Building JPA container EntityManagerFactory for persistence unit 'Wojtek'
+2014-09-30 12:13:23 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2014-09-30 12:13:23 INFO  Version:41 - HHH000412: Hibernate Core {4.2.0.Final}
+2014-09-30 12:13:23 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2014-09-30 12:13:23 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2014-09-30 12:13:23 INFO  Ejb3Configuration:528 - HHH000204: Processing PersistenceUnitInfo [
+	name: Wojtek
+	...]
+2014-09-30 12:13:23 INFO  ConnectionProviderInitiator:188 - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2014-09-30 12:13:23 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2014-09-30 12:13:23 INFO  LobCreatorBuilder:120 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2014-09-30 12:13:23 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2014-09-30 12:13:23 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2014-09-30 12:13:23 INFO  DefaultListableBeanFactory:577 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1f8388a: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sessionFactory,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,wojtekServiceBean,accountDao,accountService,categoryDao,categoryService,transactionManager,entityManagerFactory,jpaAdapter,org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2014-09-30 12:13:23 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2014-09-30 12:13:23 INFO  LobCreatorBuilder:120 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2014-09-30 12:13:23 INFO  TransactionFactoryInitiator:68 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2014-09-30 12:13:23 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2014-09-30 12:13:23 WARN  CglibAopProxy:259 - Unable to proxy method [public final void org.springframework.test.context.junit4.AbstractJUnit4SpringContextTests.setApplicationContext(org.springframework.context.ApplicationContext)] because it is final: All calls to this method via a proxy will be routed directly to the proxy.
+2014-09-30 12:13:24 INFO  GenericApplicationContext:1042 - Closing org.springframework.context.support.GenericApplicationContext@825459: startup date [Tue Sep 30 12:13:22 CEST 2014]; root of context hierarchy
+2014-09-30 12:13:24 INFO  DefaultListableBeanFactory:444 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1f8388a: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sessionFactory,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,wojtekServiceBean,accountDao,accountService,categoryDao,categoryService,transactionManager,entityManagerFactory,jpaAdapter,org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2014-09-30 12:13:24 INFO  LocalContainerEntityManagerFactoryBean:441 - Closing JPA EntityManagerFactory for persistence unit 'Wojtek'
+2014-09-30 12:13:29 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [test/beanConfiguration-test.xml]
+2014-09-30 12:13:29 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [test/database/dataSource-test.xml]
+2014-09-30 12:13:29 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [database/hibernate.xml]
+2014-09-30 12:13:29 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [beans.xml]
+2014-09-30 12:13:29 INFO  ClassPathBeanDefinitionScanner:230 - JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+2014-09-30 12:13:29 INFO  GenericApplicationContext:510 - Refreshing org.springframework.context.support.GenericApplicationContext@1ba1894: startup date [Tue Sep 30 12:13:29 CEST 2014]; root of context hierarchy
+2014-09-30 12:13:29 INFO  PropertyPlaceholderConfigurer:177 - Loading properties file from class path resource [test/properties/database-test.properties]
+2014-09-30 12:13:29 INFO  AutowiredAnnotationBeanPostProcessor:140 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2014-09-30 12:13:29 INFO  DriverManagerDataSource:153 - Loaded JDBC driver: org.postgresql.Driver
+2014-09-30 12:13:29 INFO  LocalContainerEntityManagerFactoryBean:283 - Building JPA container EntityManagerFactory for persistence unit 'Wojtek'
+2014-09-30 12:13:29 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2014-09-30 12:13:29 INFO  Version:41 - HHH000412: Hibernate Core {4.2.0.Final}
+2014-09-30 12:13:29 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2014-09-30 12:13:29 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2014-09-30 12:13:29 INFO  Ejb3Configuration:528 - HHH000204: Processing PersistenceUnitInfo [
+	name: Wojtek
+	...]
+2014-09-30 12:13:29 INFO  ConnectionProviderInitiator:188 - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2014-09-30 12:13:30 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2014-09-30 12:13:30 INFO  LobCreatorBuilder:120 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2014-09-30 12:13:30 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2014-09-30 12:13:30 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2014-09-30 12:13:30 INFO  DefaultListableBeanFactory:577 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@c4c732: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sessionFactory,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,wojtekServiceBean,accountDao,accountService,categoryDao,categoryService,transactionManager,entityManagerFactory,jpaAdapter,org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2014-09-30 12:13:30 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2014-09-30 12:13:30 INFO  LobCreatorBuilder:120 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2014-09-30 12:13:30 INFO  TransactionFactoryInitiator:68 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2014-09-30 12:13:30 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2014-09-30 12:13:30 WARN  CglibAopProxy:259 - Unable to proxy method [public final void org.springframework.test.context.junit4.AbstractJUnit4SpringContextTests.setApplicationContext(org.springframework.context.ApplicationContext)] because it is final: All calls to this method via a proxy will be routed directly to the proxy.
+2014-09-30 12:13:31 WARN  SqlExceptionHelper:143 - SQL Error: 0, SQLState: 23505
+2014-09-30 12:13:31 ERROR SqlExceptionHelper:144 - BŁĄD: podwójna wartość klucza narusza ograniczenie unikalności "cat_name"
+  Szczegóły: Klucz (category_name)=(kategoriaTestowa) już istnieje.
+2014-09-30 12:13:31 INFO  AbstractBatchImpl:195 - HHH000010: On release of batch it still contained JDBC statements
+2014-09-30 12:13:31 INFO  GenericApplicationContext:1042 - Closing org.springframework.context.support.GenericApplicationContext@1ba1894: startup date [Tue Sep 30 12:13:29 CEST 2014]; root of context hierarchy
+2014-09-30 12:13:31 INFO  DefaultListableBeanFactory:444 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@c4c732: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sessionFactory,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,wojtekServiceBean,accountDao,accountService,categoryDao,categoryService,transactionManager,entityManagerFactory,jpaAdapter,org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2014-09-30 12:13:31 INFO  LocalContainerEntityManagerFactoryBean:441 - Closing JPA EntityManagerFactory for persistence unit 'Wojtek'
+2014-09-30 12:40:58 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [test/beanConfiguration-test.xml]
+2014-09-30 12:40:58 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [test/database/dataSource-test.xml]
+2014-09-30 12:40:58 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [database/hibernate.xml]
+2014-09-30 12:40:58 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [beans.xml]
+2014-09-30 12:40:58 INFO  ClassPathBeanDefinitionScanner:230 - JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+2014-09-30 12:40:58 INFO  GenericApplicationContext:510 - Refreshing org.springframework.context.support.GenericApplicationContext@16d4d81: startup date [Tue Sep 30 12:40:58 CEST 2014]; root of context hierarchy
+2014-09-30 12:40:59 INFO  PropertyPlaceholderConfigurer:177 - Loading properties file from class path resource [test/properties/database-test.properties]
+2014-09-30 12:40:59 INFO  AutowiredAnnotationBeanPostProcessor:140 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2014-09-30 12:40:59 INFO  DriverManagerDataSource:153 - Loaded JDBC driver: org.postgresql.Driver
+2014-09-30 12:40:59 INFO  LocalContainerEntityManagerFactoryBean:283 - Building JPA container EntityManagerFactory for persistence unit 'Wojtek'
+2014-09-30 12:40:59 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2014-09-30 12:40:59 INFO  Version:41 - HHH000412: Hibernate Core {4.2.0.Final}
+2014-09-30 12:40:59 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2014-09-30 12:40:59 INFO  Environment:342 - HHH000021: Bytecode provider name : javassist
+2014-09-30 12:40:59 INFO  Ejb3Configuration:528 - HHH000204: Processing PersistenceUnitInfo [
+	name: Wojtek
+	...]
+2014-09-30 12:40:59 INFO  ConnectionProviderInitiator:188 - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2014-09-30 12:40:59 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2014-09-30 12:40:59 INFO  LobCreatorBuilder:120 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2014-09-30 12:40:59 INFO  TransactionFactoryInitiator:73 - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+2014-09-30 12:40:59 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2014-09-30 12:40:59 INFO  DefaultListableBeanFactory:577 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@64ef18: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sessionFactory,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,wojtekServiceBean,accountDao,accountService,categoryDao,categoryService,transactionManager,entityManagerFactory,jpaAdapter,org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2014-09-30 12:41:00 INFO  Dialect:128 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2014-09-30 12:41:00 INFO  LobCreatorBuilder:120 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2014-09-30 12:41:00 INFO  TransactionFactoryInitiator:68 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2014-09-30 12:41:00 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2014-09-30 12:41:00 WARN  AutowiredAnnotationBeanPostProcessor:358 - Autowired annotation should be used on methods with actual parameters: public model.service.OfferService model.service.WojtekService.getOfferService()
+2014-09-30 12:41:00 WARN  CglibAopProxy:259 - Unable to proxy method [public final void org.springframework.test.context.junit4.AbstractJUnit4SpringContextTests.setApplicationContext(org.springframework.context.ApplicationContext)] because it is final: All calls to this method via a proxy will be routed directly to the proxy.
+2014-09-30 12:41:00 INFO  GenericApplicationContext:1042 - Closing org.springframework.context.support.GenericApplicationContext@16d4d81: startup date [Tue Sep 30 12:40:58 CEST 2014]; root of context hierarchy
+2014-09-30 12:41:00 INFO  DefaultListableBeanFactory:444 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@64ef18: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sessionFactory,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,wojtekServiceBean,accountDao,accountService,categoryDao,categoryService,transactionManager,entityManagerFactory,jpaAdapter,org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2014-09-30 12:41:00 INFO  LocalContainerEntityManagerFactoryBean:441 - Closing JPA EntityManagerFactory for persistence unit 'Wojtek'

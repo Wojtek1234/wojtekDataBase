@@ -85,4 +85,18 @@ public class BaseDao<T> {
     public void remove(T entity) {
         this.entityManager.remove( this.entityManager.contains( entity ) ? entity : this.entityManager.merge( entity ) );
     }
+
+
+    public void removeAll()
+    {
+        final List<T> allEntites = this.getAll();
+
+        for( T entity : allEntites )
+        {
+            this.remove( entity );
+        }
+
+
+
+    }
 }

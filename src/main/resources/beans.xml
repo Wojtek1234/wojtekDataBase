@@ -18,6 +18,7 @@
     <bean id="wojtekServiceBean" class="model.service.WojtekService">
 
         <property name="accountService" ref="accountService"/>
+        <property name="categoryService" ref="categoryService"/>
 
     </bean>
 
@@ -31,9 +32,19 @@
         <property name="accountDao" ref="accountDao"/>
    </bean>
 
+    <bean id="categoryDao" class="model.dao.CategoryDao">
+        <constructor-arg value="model.entity.CategoryEntity"/>
+    </bean>
+
+    <bean id="categoryService" class="model.service.CategoryService">
+        <property name="categoryDao" ref="categoryDao"/>
+    </bean>
+
     <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
         <property name="entityManagerFactory" ref="entityManagerFactory"/>
     </bean>
+
+
 
 
     <bean id="entityManagerFactory"
