@@ -5,6 +5,8 @@ CREATE SEQUENCE seq_account
   START 1
   CACHE 1;
 ALTER TABLE seq_account
+  OWNER TO postgres;
+
 
 CREATE SEQUENCE seq_category
   INCREMENT 1
@@ -13,4 +15,13 @@ CREATE SEQUENCE seq_category
   START 1
   CACHE 1;
 ALTER TABLE seq_category
+  OWNER TO postgres;
 
+CREATE SEQUENCE seq_off
+  INCREMENT 1
+  MINVALUE 1
+  MAXVALUE 999999999999999
+  START 1
+  CACHE 1;
+ALTER TABLE seq_off
+  OWNER TO postgres;

@@ -3,6 +3,8 @@ package model.entity;
 import model.entity.base.BaseEntity;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Created by w.maciejewski on 2014-09-29.
@@ -17,6 +19,15 @@ public class AccountEntity  extends BaseEntity{
 
     @Column( name = "account_name" )
     private String name;
+
+	@OneToMany( mappedBy = "accountEntity", cascade = CascadeType.MERGE)
+	private Set<OfferEntity> offerEntities = new HashSet<>();
+
+
+	public void setOfferEntities(Set<OfferEntity> offerEntities){this.offerEntities=offerEntities;}
+	public Set<OfferEntity> getOfferEntities(){return this.offerEntities;}
+
+
 
     public AccountEntity()
     {

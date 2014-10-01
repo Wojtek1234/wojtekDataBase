@@ -32,8 +32,11 @@ public class MainServiceBean
         this.categoryService = categoryService;
     }
 
+
+	public OfferService getOfferService() {
+		return offerService;
+	}
+
     @Inject
-    public OfferService getOfferService() {
-        return offerService;
-    }
+    public void setOfferService( OfferService offerService ) { this.offerService=offerService;}
 }

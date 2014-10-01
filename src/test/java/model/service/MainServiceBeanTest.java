@@ -35,7 +35,7 @@ public class MainServiceBeanTest extends AbstractJUnit4SpringContextTests {
 		CategoryService categoryService = mainServiceBean.getCategoryService();
 		AccountService accountService = mainServiceBean.getAccountService();
 		OfferService offerService = mainServiceBean.getOfferService();
-		offerService.removeAll();
+		//offerService.removeAll();
 		accountService.removeAll();
 		categoryService.removeAll();
 
@@ -96,7 +96,7 @@ public class MainServiceBeanTest extends AbstractJUnit4SpringContextTests {
 		CategoryEntity category = createCategory(TEST_NAME_CATEGORY);
 		AccountEntity account = createAccount(TEST_NAME_ACCOUNT);
 
-		java.sql.Timestamp data = java.sql.Timestamp.valueOf("2010-10-10 09:00:00 +00:00");
+		java.sql.Timestamp data = java.sql.Timestamp.valueOf("2010-10-10 09:00:00");
 		OfferEntity offerEntity = offerService.create(TEST_NAME_OFFER, account, category, data, 100);
 		CategoryEntity category2 = createCategory(TEST_NAME_CATEGORY + "2");
 
