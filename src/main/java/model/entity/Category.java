@@ -57,9 +57,7 @@ public class Category extends Base
         if( !(object instanceof Category) )
             return false;
         final Category category = (Category)object;
-        return category.getName().equals( this.name ) && category.getId().equals( this.getId() )
-                && category.getCreated().equals( this.getCreated() )
-                && category.getModified().equals( this.getModified() );
+        return category.getName().equals( this.name ) && category.getId().equals( this.getId() ) ;
     }
 
 

@@ -20,19 +20,19 @@ public abstract class BaseService  <E extends Base, T extends BaseDao<E>> implem
     }
 
     abstract protected T getBaseDao();
-
+	@Transactional
     @Override
     public List<E> getAll()
     {
         return this.getBaseDao().getAll();
     }
-
+	@Transactional
     @Override
     public E getById( Long id )
     {
         return this.getBaseDao().getById( id );
     }
-
+	@Transactional
     @Override
     public E getByName( String name )
     {

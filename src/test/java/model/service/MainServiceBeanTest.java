@@ -107,21 +107,17 @@ public class MainServiceBeanTest extends AbstractJUnit4SpringContextTests {
 	}
 	@Test
 	public void testAccountServiceFunctions(){
-		String testName1="test1",testName2="test2",testName3="test3";
+
+		String testName1="test1",testName2="test2";
 		Account account = createAccount(testName1);
 		Account account2 = createAccount(testName2);
-		Account account3 = createAccount(testName2);
-		account3.setId( (long)256 );
 
 		AccountService accountService = mainServiceBean.getAccountService();
-		Account account123 = accountService.getAll().get(0);
-
 		Account accountTest1=accountService.getByName( testName1 );
 		assertEquals(  account,accountTest1);
 		Account accountTest2=accountService.getById( account2.getId() );
 		assertEquals(  account2,accountTest2);
-		Account accountTest3=accountService.getById((long)256 );
-		assertEquals(  account3,accountTest3);
+
 
 
 

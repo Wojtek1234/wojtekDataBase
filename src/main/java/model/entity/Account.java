@@ -56,9 +56,8 @@ public class Account extends Base
         if( !(object instanceof Account) )
             return false;
         final Account account = (Account)object;
-        return account.getName().equals( this.name ) && account.getId().equals( this.getId() )
-                && account.getCreated().equals( this.getCreated() )
-                && account.getModified().equals( this.getModified() );
+        return account.getName().equals( this.name ) && account.getId().equals( this.getId() );
+
     }
 
     @Override

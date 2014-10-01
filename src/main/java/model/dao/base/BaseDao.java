@@ -51,9 +51,6 @@ public class BaseDao<T> {
 
         String entityName = this.clazz.getSimpleName();
 
-
-
-
         String queryText = "SELECT x from " + entityName + " x WHERE " + entityName.toLowerCase() + "_name=:name";
         final Query query = this.entityManager.createQuery( queryText );
         query.setParameter( "name", name );
