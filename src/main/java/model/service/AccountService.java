@@ -1,7 +1,7 @@
 package model.service;
 
 import model.dao.AccountDao;
-import model.entity.AccountEntity;
+import model.entity.Account;
 import model.service.base.BaseService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -13,7 +13,7 @@ import javax.inject.Inject;
  */
 
 @Service
-public class AccountService extends BaseService<AccountEntity,AccountDao> {
+public class AccountService extends BaseService<Account,AccountDao> {
     private AccountDao accountDao;
 
     public AccountService()
@@ -21,6 +21,7 @@ public class AccountService extends BaseService<AccountEntity,AccountDao> {
     }
 
     @Override
+	@Transactional
     protected AccountDao getBaseDao()
     {
         return this.accountDao;
@@ -28,9 +29,9 @@ public class AccountService extends BaseService<AccountEntity,AccountDao> {
 
     @Override
     @Transactional
-    public AccountEntity create(String name)
+    public Account create(String name)
     {
-        return this.accountDao.create( new AccountEntity( name ) );
+        return this.accountDao.create( new Account( name ) );
     }
 
     @Inject

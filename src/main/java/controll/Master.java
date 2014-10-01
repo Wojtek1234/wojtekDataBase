@@ -1,6 +1,6 @@
 package controll;
 
-import model.entity.AccountEntity;
+import model.entity.Account;
 import model.service.AccountService;
 import model.service.MainServiceBean;
 import org.springframework.context.ApplicationContext;
@@ -19,9 +19,9 @@ public class Master {
 
 
         AccountService accountService= mainServiceBean.getAccountService();
-        List<AccountEntity> list=accountService.getAll();
+        List<Account> list=accountService.getAll();
 
-        for(AccountEntity l:list){
+        for(Account l:list){
             System.out.println(l.getName());
         }
 

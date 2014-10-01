@@ -2,7 +2,10 @@ package model.dao.base;
 
 import org.springframework.stereotype.Repository;
 
-import javax.persistence.*;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaQuery;
 import java.util.List;
 
@@ -12,6 +15,7 @@ import java.util.List;
 
 @Repository
 public class BaseDao<T> {
+
 
 
     @PersistenceContext()
@@ -41,8 +45,15 @@ public class BaseDao<T> {
         return this.entityManager.find( this.clazz, id );
     }
 
+
     public T getByName(String name){
+
+
         String entityName = this.clazz.getSimpleName();
+
+
+
+
         String queryText = "SELECT x from " + entityName + " x WHERE " + entityName.toLowerCase() + "_name=:name";
         final Query query = this.entityManager.createQuery( queryText );
         query.setParameter( "name", name );

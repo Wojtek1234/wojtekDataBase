@@ -25,7 +25,7 @@
     <aop:aspectj-autoproxy proxy-target-class="true"/>
 
     <bean id="accountDao" class="model.dao.AccountDao">
-        <constructor-arg value="model.entity.AccountEntity"/>
+        <constructor-arg value="model.entity.Account"/>
     </bean>
 
     <bean id="accountService" class="model.service.AccountService">
@@ -33,14 +33,14 @@
    </bean>
 
     <bean id="categoryDao" class="model.dao.CategoryDao">
-        <constructor-arg value="model.entity.CategoryEntity"/>
+        <constructor-arg value="model.entity.Category"/>
     </bean>
 
     <bean id="categoryService" class="model.service.CategoryService">
         <property name="categoryDao" ref="categoryDao"/>
     </bean>
     <bean id="offerDao" class="model.dao.OfferDao">
-        <constructor-arg value="model.entity.OfferEntity"/>
+        <constructor-arg value="model.entity.Offer"/>
     </bean>
     <bean id="offerService" class="model.service.OfferService">
         <property name="offerDao" ref="offerDao"/>

@@ -8,10 +8,10 @@ import java.util.Date;
 /**
  * Created by w.maciejewski on 2014-09-29.
  */
-public abstract class BaseEntity extends IdEntity {
+public abstract class Base extends IdEntity {
 
     private static final long serialVersionUID = 1L;
-
+	protected String entityName;
     @Column( nullable = false )
     @Temporal( TemporalType.TIMESTAMP )
     private Date created;

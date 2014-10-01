@@ -1,6 +1,6 @@
 package model.entity;
 
-import model.entity.base.BaseEntity;
+import model.entity.base.Base;
 
 import javax.persistence.*;
 import java.util.HashSet;
@@ -13,30 +13,29 @@ import java.util.Set;
 @Table( name = "account" )
 @SequenceGenerator( name = "seq", sequenceName = "seq_account" )
 @AttributeOverride(name = "id", column = @Column( name = "account_id" ) )
-public class AccountEntity  extends BaseEntity{
+public class Account extends Base
+{
 
 
-    @OneToMany( mappedBy = "account", cascade = CascadeType.MERGE)
-    private Set<OfferEntity> offerSet = new HashSet<>();
 
     @Column( name = "account_name" )
     private String name;
 
-	@OneToMany( mappedBy = "accountEntity", cascade = CascadeType.MERGE)
-	private Set<OfferEntity> offerEntities = new HashSet<>();
+	@OneToMany( mappedBy = "account", cascade = CascadeType.MERGE)
+	private Set<Offer> offers = new HashSet<>();
 
 
-	public void setOfferEntities(Set<OfferEntity> offerEntities){this.offerEntities=offerEntities;}
-	public Set<OfferEntity> getOfferEntities(){return this.offerEntities;}
+	public void setOffers(Set<Offer> offerEntities){this.offers=offerEntities;}
+	public Set<Offer> getOffers(){return this.offers;}
 
 
 
-    public AccountEntity()
+    public Account()
     {
         super();
     }
 
-    public AccountEntity( String name )
+    public Account( String name )
     {
         this.name = name;
     }
@@ -54,9 +53,9 @@ public class AccountEntity  extends BaseEntity{
     @Override
     public final boolean equals( Object object )
     {
-        if( !(object instanceof AccountEntity) )
+        if( !(object instanceof Account) )
             return false;
-        final AccountEntity account = (AccountEntity)object;
+        final Account account = (Account)object;
         return account.getName().equals( this.name ) && account.getId().equals( this.getId() )
                 && account.getCreated().equals( this.getCreated() )
                 && account.getModified().equals( this.getModified() );

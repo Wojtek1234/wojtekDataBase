@@ -1,8 +1,8 @@
 package model.service;
 
-import model.entity.AccountEntity;
-import model.entity.CategoryEntity;
-import model.entity.OfferEntity;
+import model.entity.Account;
+import model.entity.Category;
+import model.entity.Offer;
 import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -18,7 +18,7 @@ import static org.junit.Assert.*;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {"classpath:/test/beanConfiguration-test.xml"})
 @Transactional
-//@TransactionConfiguration(defaultRollback = false)
+@TransactionConfiguration(defaultRollback = false)
 public class MainServiceBeanTest extends AbstractJUnit4SpringContextTests {
 
 	private static final String TEST_NAME_ACCOUNT = "kontoTestowe";
@@ -58,7 +58,7 @@ public class MainServiceBeanTest extends AbstractJUnit4SpringContextTests {
 
 		AccountService accountService = mainServiceBean.getAccountService();
 		accountService.create(TEST_NAME_ACCOUNT);
-		AccountEntity account = accountService.getAll().get(0);
+		Account account = accountService.getAll().get(0);
 		assertThat(account.getName(), equalTo(TEST_NAME_ACCOUNT));
 		accountService.remove(account);
 	}
@@ -72,8 +72,8 @@ public class MainServiceBeanTest extends AbstractJUnit4SpringContextTests {
 		categoryService.create(TEST_NAME_CATEGORY);
 
 		categoryService.create(TEST_NAME_CATEGORY + "dwa");
-		CategoryEntity category = categoryService.getAll().get(0);
-		CategoryEntity category2 = categoryService.getAll().get(1);
+		Category category = categoryService.getAll().get(0);
+		Category category2 = categoryService.getAll().get(1);
 		assertThat(category.getName(), equalTo(TEST_NAME_CATEGORY));
 		assertNotSame(category.getId(), category2.getId());
 
@@ -93,25 +93,46 @@ public class MainServiceBeanTest extends AbstractJUnit4SpringContextTests {
 	@Test
 	public void testOfferServiceBean() {
 		OfferService offerService = mainServiceBean.getOfferService();
-		CategoryEntity category = createCategory(TEST_NAME_CATEGORY);
-		AccountEntity account = createAccount(TEST_NAME_ACCOUNT);
+		Category category = createCategory(TEST_NAME_CATEGORY);
+		Account account = createAccount(TEST_NAME_ACCOUNT);
 
 		java.sql.Timestamp data = java.sql.Timestamp.valueOf("2010-10-10 09:00:00");
-		OfferEntity offerEntity = offerService.create(TEST_NAME_OFFER, account, category, data, 100);
-		CategoryEntity category2 = createCategory(TEST_NAME_CATEGORY + "2");
+		Offer offer = offerService.create(TEST_NAME_OFFER, account, category, data, 100);
+		Category category2 = createCategory(TEST_NAME_CATEGORY + "2");
 
-		OfferEntity offerEntity1 = offerService.create(TEST_NAME_OFFER, account, category2, data, 100);
+		Offer offer1 = offerService.create(TEST_NAME_OFFER, account, category2, data, 100);
 
-		assertEquals(offerEntity.getAccountEntity().getId(), offerEntity1.getAccountEntity().getId());
-		assertNotSame(offerEntity.getCategoryEntity().getId(), offerEntity1.getCategoryEntity().getId());
+		assertEquals( offer.getAccount().getId(), offer1.getAccount().getId());
+		assertNotSame( offer.getCategory().getId(), offer1.getCategory().getId());
+	}
+	@Test
+	public void testAccountServiceFunctions(){
+		String testName1="test1",testName2="test2",testName3="test3";
+		Account account = createAccount(testName1);
+		Account account2 = createAccount(testName2);
+		Account account3 = createAccount(testName2);
+		account3.setId( (long)256 );
+
+		AccountService accountService = mainServiceBean.getAccountService();
+		Account account123 = accountService.getAll().get(0);
+
+		Account accountTest1=accountService.getByName( testName1 );
+		assertEquals(  account,accountTest1);
+		Account accountTest2=accountService.getById( account2.getId() );
+		assertEquals(  account2,accountTest2);
+		Account accountTest3=accountService.getById((long)256 );
+		assertEquals(  account3,accountTest3);
+
+
+
+
 	}
 
-
-	private CategoryEntity createCategory(String name) {
+	private Category createCategory(String name) {
 		return mainServiceBean.getCategoryService().create(name);
 	}
 
-	private AccountEntity createAccount(String name) {
+	private Account createAccount(String name) {
 		return mainServiceBean.getAccountService().create(name);
 	}
 

@@ -1,6 +1,6 @@
 package model.entity;
 
-import model.entity.base.BaseEntity;
+import model.entity.base.Base;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
@@ -12,7 +12,8 @@ import java.sql.Timestamp;
 @Table( name = "offer" )
 @SequenceGenerator( name = "seq", sequenceName = "seq_off" )
 @AttributeOverride(name = "id", column = @Column( name = "offer_id" ) )
-public class OfferEntity extends BaseEntity {
+public class Offer extends Base
+{
 
 	@Column( name = "offer_name" )
 	private String name;
@@ -22,23 +23,23 @@ public class OfferEntity extends BaseEntity {
 	private double price;
 
 
-	@ManyToOne( targetEntity = AccountEntity.class, cascade = CascadeType.MERGE)
+	@ManyToOne( targetEntity = Account.class, cascade = CascadeType.MERGE)
 	@JoinColumn( name = "offer_account_id" )
-	private AccountEntity accountEntity;
+	private Account account;
 
-	@ManyToOne( targetEntity = CategoryEntity.class )
+	@ManyToOne( targetEntity = Category.class )
 	@JoinColumn( name = "offer_category_id" )
-	private CategoryEntity categoryEntity;
+	private Category category;
 
-	public OfferEntity()
+	public Offer()
 	{
 	}
 
-	public OfferEntity( String name, AccountEntity accountEntity, CategoryEntity  categoryEntity,Timestamp timestamp,double price )
+	public Offer( String name, Account account, Category category, Timestamp timestamp, double price )
 	{
 		this.name = name;
-		this.accountEntity = accountEntity;
-		this.categoryEntity = categoryEntity;
+		this.account = account;
+		this.category = category;
 		this.timestamp=timestamp;
 		this.price=price;
 	}
@@ -54,12 +55,12 @@ public class OfferEntity extends BaseEntity {
 	}
 
 
-	public void setAccountEntity(AccountEntity accountEntity) {
-		this.accountEntity = accountEntity;
+	public void setAccount(Account account ) {
+		this.account = account;
 	}
 
-	public void setCategoryEntity(CategoryEntity categoryEntity) {
-		this.categoryEntity = categoryEntity;
+	public void setCategory(Category category ) {
+		this.category = category;
 	}
 
 	public Timestamp getTimestamp() {
@@ -78,25 +79,25 @@ public class OfferEntity extends BaseEntity {
 		this.price = price;
 	}
 
-	public AccountEntity getAccountEntity() {
-		return accountEntity;
+	public Account getAccount() {
+		return account;
 	}
 
-	public CategoryEntity getCategoryEntity() {
-		return categoryEntity;
+	public Category getCategory() {
+		return category;
 	}
 
 
 	@Override
 	public final boolean equals( Object object )
 	{
-		if( !(object instanceof OfferEntity) )
+		if( !(object instanceof Offer) )
 			return false;
-		final OfferEntity offerEntity = (OfferEntity)object;
-		return offerEntity.getName().equals( this.name ) && offerEntity.getId().equals( this.getId() )
-				&& offerEntity.getAccountEntity().equals(this.getAccountEntity())
-				&& offerEntity.getCategoryEntity().equals( this.getCategoryEntity())
-				&& offerEntity.getPrice()==this.getPrice();
+		final Offer offer = (Offer)object;
+		return offer.getName().equals( this.name ) && offer.getId().equals( this.getId() )
+				&& offer.getAccount().equals(this.getAccount())
+				&& offer.getCategory().equals( this.getCategory())
+				&& offer.getPrice()==this.getPrice();
 
 	}
 

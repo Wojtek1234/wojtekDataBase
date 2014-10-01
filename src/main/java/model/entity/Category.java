@@ -1,6 +1,6 @@
 package model.entity;
 
-import model.entity.base.BaseEntity;
+import model.entity.base.Base;
 
 import javax.persistence.*;
 import java.util.HashSet;
@@ -14,29 +14,29 @@ import java.util.Set;
 @Table( name = "category" )
 @SequenceGenerator( name = "seq", sequenceName = "seq_category" )
 @AttributeOverride(name = "id", column = @Column( name = "category_id" ) )
-public class CategoryEntity extends BaseEntity {
+public class Category extends Base
+{
 
 
 
-    @OneToMany( mappedBy = "category" )
-    private Set<OfferEntity> offerEntitySet = new HashSet<>();
+
 
     @Column( name = "category_name" )
     private String name;
 
-	@OneToMany( mappedBy = "categoryEntity", cascade = CascadeType.MERGE)
-	private Set<OfferEntity> offerEntities = new HashSet<>();
+	@OneToMany( mappedBy = "category", cascade = CascadeType.MERGE)
+	private Set<Offer> offers = new HashSet<>();
 
 
-	public void setOfferEntities(Set<OfferEntity> offerEntities){this.offerEntities=offerEntities;}
-	public Set<OfferEntity> getOfferEntities(){return this.offerEntities;}
+	public void setOffers(Set<Offer> offerEntities){this.offers=offerEntities;}
+	public Set<Offer> getOffers(){return this.offers;}
 
 
 
-	public CategoryEntity(){
+	public Category(){
         super();
     }
-    public CategoryEntity(String name){
+    public Category( String name ){
         this.name=name;
     }
 
@@ -54,12 +54,12 @@ public class CategoryEntity extends BaseEntity {
     @Override
     public final boolean equals( Object object )
     {
-        if( !(object instanceof CategoryEntity) )
+        if( !(object instanceof Category) )
             return false;
-        final CategoryEntity categoryEntity = (CategoryEntity)object;
-        return categoryEntity.getName().equals( this.name ) && categoryEntity.getId().equals( this.getId() )
-                && categoryEntity.getCreated().equals( this.getCreated() )
-                && categoryEntity.getModified().equals( this.getModified() );
+        final Category category = (Category)object;
+        return category.getName().equals( this.name ) && category.getId().equals( this.getId() )
+                && category.getCreated().equals( this.getCreated() )
+                && category.getModified().equals( this.getModified() );
     }
 
 

@@ -1,9 +1,9 @@
 package model.service;
 
 import model.dao.OfferDao;
-import model.entity.AccountEntity;
-import model.entity.CategoryEntity;
-import model.entity.OfferEntity;
+import model.entity.Account;
+import model.entity.Category;
+import model.entity.Offer;
 import model.service.base.BaseService;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -13,7 +13,7 @@ import java.sql.Timestamp;
 /**
  * Created by w.maciejewski on 2014-09-30.
  */
-public  class OfferService extends BaseService<OfferEntity,OfferDao>
+public  class OfferService extends BaseService<Offer,OfferDao>
 {
 
 	private OfferDao offerDao;
@@ -24,9 +24,9 @@ public  class OfferService extends BaseService<OfferEntity,OfferDao>
     }
 
     @Transactional
-    public OfferEntity create(String name,AccountEntity accountEntity,CategoryEntity categoryEntity, Timestamp experiedDate,
+    public Offer create(String name,Account account,Category category, Timestamp experiedDate,
                               double minimalPrice) {
-        return this.offerDao.create(new OfferEntity( name,accountEntity,categoryEntity,experiedDate,minimalPrice ));
+        return this.offerDao.create(new Offer( name, account, category,experiedDate,minimalPrice ));
     }
 
 
@@ -35,7 +35,7 @@ public  class OfferService extends BaseService<OfferEntity,OfferDao>
 
 
 	@Transactional
-	@Override public OfferEntity create( String name )
+	@Override public Offer create( String name )
 	{
 		return null;
 	}

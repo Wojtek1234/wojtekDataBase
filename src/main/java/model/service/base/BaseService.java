@@ -1,7 +1,7 @@
 package model.service.base;
 
 import model.dao.base.BaseDao;
-import model.entity.base.BaseEntity;
+import model.entity.base.Base;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -13,7 +13,7 @@ import java.util.Map;
  * Created by w.maciejewski on 2014-09-29.
  */
 @Service
-public abstract class BaseService  <E extends BaseEntity, T extends BaseDao<E>> implements serviceInteface<E>{
+public abstract class BaseService  <E extends Base, T extends BaseDao<E>> implements serviceInteface<E>{
     public BaseService()
     {
         super();
