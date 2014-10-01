@@ -16,6 +16,8 @@ import java.util.Set;
 public class AccountEntity  extends BaseEntity{
 
 
+    @OneToMany( mappedBy = "account", cascade = CascadeType.MERGE)
+    private Set<OfferEntity> offerSet = new HashSet<>();
 
     @Column( name = "account_name" )
     private String name;

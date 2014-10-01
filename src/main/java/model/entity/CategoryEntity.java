@@ -16,6 +16,11 @@ import java.util.Set;
 @AttributeOverride(name = "id", column = @Column( name = "category_id" ) )
 public class CategoryEntity extends BaseEntity {
 
+
+
+    @OneToMany( mappedBy = "category" )
+    private Set<OfferEntity> offerEntitySet = new HashSet<>();
+
     @Column( name = "category_name" )
     private String name;
 

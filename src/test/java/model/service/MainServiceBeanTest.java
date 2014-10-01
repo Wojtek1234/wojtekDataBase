@@ -18,7 +18,7 @@ import static org.junit.Assert.*;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {"classpath:/test/beanConfiguration-test.xml"})
 @Transactional
-@TransactionConfiguration(defaultRollback = false)
+//@TransactionConfiguration(defaultRollback = false)
 public class MainServiceBeanTest extends AbstractJUnit4SpringContextTests {
 
 	private static final String TEST_NAME_ACCOUNT = "kontoTestowe";
