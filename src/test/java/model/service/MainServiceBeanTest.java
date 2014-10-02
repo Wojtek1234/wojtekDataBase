@@ -12,6 +12,9 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.transaction.TransactionConfiguration;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.junit.Assert.*;
 
@@ -35,7 +38,7 @@ public class MainServiceBeanTest extends AbstractJUnit4SpringContextTests {
 		CategoryService categoryService = mainServiceBean.getCategoryService();
 		AccountService accountService = mainServiceBean.getAccountService();
 		OfferService offerService = mainServiceBean.getOfferService();
-		//offerService.removeAll();
+		offerService.removeAll();
 		accountService.removeAll();
 		categoryService.removeAll();
 
@@ -123,6 +126,125 @@ public class MainServiceBeanTest extends AbstractJUnit4SpringContextTests {
 
 
 	}
+
+	@Test
+	public void testCategoryServiceFunctions(){
+
+		String testName1="test1",testName2="test2";
+		Category account = createCategory( testName1 );
+		Category account2 = createCategory( testName2 );
+
+		CategoryService categoryService = mainServiceBean.getCategoryService();
+		Category accountTest1=categoryService.getByName( testName1 );
+		assertEquals(  account,accountTest1);
+		Category accountTest2=categoryService.getById( account2.getId() );
+		assertEquals(  account2,accountTest2);
+
+	}
+
+	@Test
+	public void testOfferServiceFunction(){
+
+		Category category = createCategory(TEST_NAME_CATEGORY);
+		Account account = createAccount(TEST_NAME_ACCOUNT);
+
+		java.sql.Timestamp data = java.sql.Timestamp.valueOf("2010-10-10 09:00:00");
+
+		String testName1="test1";
+
+		Offer offer=mainServiceBean.getOfferService().create( testName1,account,category,data,1000);
+		Offer offer2=mainServiceBean.getOfferService().getByName( testName1 );
+		assertEquals( offer,offer2 );
+
+	}
+
+
+	@Test
+	@Transactional
+	public void testGetOffersByCategory(){
+		CategoryService categoryService=mainServiceBean.getCategoryService();
+		String test="test1";
+		Category category1=categoryService.create(test);
+		String test2="test2";
+		Category category2=categoryService.create( test2);
+		Account account=createAccount( TEST_NAME_ACCOUNT );
+		
+		java.sql.Timestamp data = java.sql.Timestamp.valueOf("2010-10-10 09:00:00");
+		double price=100;
+		
+		OfferService offerService=mainServiceBean.getOfferService();
+
+
+		Set<Offer> offers = new HashSet<>();
+		Set<Offer> offers2 = new HashSet<>();
+
+		Set<Offer> offersFromCategory = new HashSet<>();
+		Set<Offer> offersFromCategory2 = new HashSet<>();
+
+
+
+		offers.add( offerService.create( "1",account,category1,data,price ) );
+		offers.add( offerService.create( "2",account,category1,data,price ));
+		offers.add( offerService.create( "3", account, category1, data, price ) );
+		offers2.add( offerService.create( "4", account, category2, data, price ) );
+		offers2.add( offerService.create( "5", account, category2, data, price ) );
+		offers2.add( offerService.create( "6", account, category2, data, price ) );
+
+
+		offersFromCategory=categoryService.getOffersByCategory( category1.getName() );
+		offersFromCategory2=categoryService.getOffersByCategory( category2.getName() );
+
+		assertEquals( offers, offersFromCategory );
+
+		assertEquals(offers2,offersFromCategory2);
+
+
+	}
+
+	@Test
+	@Transactional
+	public void testGetOffersByAccount(){
+		CategoryService categoryService=mainServiceBean.getCategoryService();
+		AccountService accountService=mainServiceBean.getAccountService();
+		String test="test1";
+
+		String test2="test2";
+		Category category=categoryService.create( TEST_NAME_CATEGORY);
+		Account account=createAccount( test );
+		Account account2=createAccount( test2 );
+
+		java.sql.Timestamp data = java.sql.Timestamp.valueOf("2010-10-10 09:00:00");
+		double price=100;
+
+		OfferService offerService=mainServiceBean.getOfferService();
+
+
+		Set<Offer> offers = new HashSet<>();
+		Set<Offer> offers2 = new HashSet<>();
+
+		Set<Offer> offersFromCategory = new HashSet<>();
+		Set<Offer> offersFromCategory2 = new HashSet<>();
+
+
+
+		offers.add( offerService.create( "1",account,category,data,price ) );
+		offers.add( offerService.create( "2",account,category,data,price ));
+		offers.add( offerService.create( "3", account, category, data, price ) );
+		offers2.add( offerService.create( "4", account2, category, data, price ) );
+		offers2.add( offerService.create( "5", account2, category, data, price ) );
+		offers2.add( offerService.create( "6", account2, category, data, price ) );
+
+
+		offersFromCategory=accountService.getOffersByAccount( account.getName() );
+		offersFromCategory2=accountService.getOffersByAccount( account2.getName() );
+
+		assertEquals( offers, offersFromCategory );
+
+		assertEquals(offers2,offersFromCategory2);
+
+
+	}
+
 
 	private Category createCategory(String name) {
 		return mainServiceBean.getCategoryService().create(name);

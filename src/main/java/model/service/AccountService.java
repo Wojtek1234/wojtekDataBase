@@ -2,11 +2,14 @@ package model.service;
 
 import model.dao.AccountDao;
 import model.entity.Account;
+import model.entity.Offer;
 import model.service.base.BaseService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.inject.Inject;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Created by w.maciejewski on 2014-09-29.
@@ -39,4 +42,27 @@ public class AccountService extends BaseService<Account,AccountDao> {
     {
         this.accountDao = accountDao;
     }
+
+
+	@Transactional
+	public Set<Offer> getOffersByAccount(String name){
+		Set<Offer> offers=accountDao.getByName( name ).getOffers();
+		Set<Offer> returnOffers=new HashSet<>(  );
+		for(Offer off:offers){
+			returnOffers.add( off );
+		}
+		return returnOffers;
+	}
+
+	@Transactional
+	public Set<Offer> getOffersByAccount(long ID){
+
+		Set<Offer> offers=accountDao.getById( ID ).getOffers();
+		Set<Offer> returnOffers=new HashSet<>(  );
+		for(Offer off:offers){
+			returnOffers.add( off );
+		}
+		return returnOffers;
+
+	}
 }
