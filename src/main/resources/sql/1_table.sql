@@ -24,6 +24,8 @@ ALTER TABLE account
   );
   ALTER TABLE category
     OWNER TO postgres;
+
+    
 CREATE TABLE offer
 (
   offer_id bigint NOT NULL,
@@ -32,6 +34,7 @@ CREATE TABLE offer
   offer_category_id bigint NOT NULL,
   offer_date time with time zone NOT NULL,
   offer_price double precision,
+  offer_img bytea,
   CONSTRAINT off_id PRIMARY KEY (offer_id),
   CONSTRAINT fk_offer_account FOREIGN KEY (offer_account_id)
       REFERENCES account (account_id) MATCH SIMPLE
@@ -45,3 +48,4 @@ WITH (
 );
 ALTER TABLE offer
   OWNER TO postgres;
+
