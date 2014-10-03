@@ -8,6 +8,7 @@ import model.service.base.BaseService;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.inject.Inject;
+import java.awt.image.BufferedImage;
 import java.sql.Timestamp;
 
 /**
@@ -25,8 +26,8 @@ public  class OfferService extends BaseService<Offer,OfferDao>
 
     @Transactional
     public Offer create(String name,Account account,Category category, Timestamp experiedDate,
-                              double minimalPrice) {
-        return this.offerDao.create(new Offer( name, account, category,experiedDate,minimalPrice ));
+                              double minimalPrice,BufferedImage img) {
+        return this.offerDao.create(new Offer( name, account, category,experiedDate,minimalPrice,img ));
     }
 
 

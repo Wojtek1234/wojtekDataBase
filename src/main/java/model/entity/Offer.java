@@ -2,7 +2,12 @@ package model.entity;
 
 import model.entity.base.Base;
 
+import javax.imageio.ImageIO;
 import javax.persistence.*;
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 import java.sql.Timestamp;
 
 /**
@@ -21,7 +26,8 @@ public class Offer extends Base
 	private Timestamp timestamp;
 	@Column( name = "offer_price" )
 	private double price;
-
+	@Column( name = "offer_img" )
+	private byte[] img;
 
 	@ManyToOne( targetEntity = Account.class, cascade = CascadeType.MERGE)
 	@JoinColumn( name = "offer_account_id" )
@@ -35,23 +41,45 @@ public class Offer extends Base
 	{
 	}
 
-	public Offer( String name, Account account, Category category, Timestamp timestamp, double price )
+	public Offer( String name, Account account, Category category, Timestamp timestamp, double price ,BufferedImage img)
 	{
 		this.name = name;
 		this.account = account;
 		this.category = category;
 		this.timestamp=timestamp;
 		this.price=price;
+		this.img=changeToByteArray(img);
+	}
+
+	private byte[] changeToByteArray( BufferedImage img )
+	{
+		if(img==null ){
+			return null;
+		}
+		ByteArrayOutputStream bio=new ByteArrayOutputStream(  );
+		try
+		{
+			ImageIO.write( img,"png",bio );
+			bio.flush();
+			byte[] imageInByte = bio.toByteArray();
+			bio.close();
+			return imageInByte;
+
+		}
+		catch( IOException e )
+		{
+			return null;
+		}
 	}
 
 	@Override
 	public String getName() {
-		return null;
+		return this.name;
 	}
 
 	@Override
 	public void setName(String name) {
-
+	this.name=name;
 	}
 
 
@@ -61,6 +89,25 @@ public class Offer extends Base
 
 	public void setCategory(Category category ) {
 		this.category = category;
+	}
+
+	public void setImage(BufferedImage img){this.img=changeToByteArray(img);}
+
+
+	public BufferedImage getImage()
+	{
+
+		try
+		{
+			return ImageIO.read( new ByteArrayInputStream( this.img ) );
+
+		}
+		catch( IOException e )
+		{
+
+			return null;
+
+		}
 	}
 
 	public Timestamp getTimestamp() {

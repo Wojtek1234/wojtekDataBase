@@ -23,8 +23,8 @@ public class Category extends Base
 
     @Column( name = "category_name" )
     private String name;
-
-	@OneToMany( mappedBy = "category", cascade = CascadeType.MERGE)
+	//TODO tutaj fetch type chyba nie najlepszy pomysl
+	@OneToMany( mappedBy = "category", cascade = CascadeType.MERGE , fetch=FetchType.LAZY)
 	private Set<Offer> offers = new HashSet<>();
 
 
