@@ -1,29 +1,33 @@
 package controll;
 
-import model.entity.Account;
-import model.service.AccountService;
+import model.AccountCheck;
+import model.CurrentAccount;
 import model.service.MainServiceBean;
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import java.util.List;
+import view.MainFrame;
+import controll.ActionListeners.LogButtAL;
 
 /**
  * Created by w.maciejewski on 2014-09-29.
  */
 public class Master {
 
-    public Master(){
+	private final MainServiceBean mainServiceBean;
+	private final MainFrame gui;
+	private final CurrentAccount currentAccount=CurrentAccount.getInstance();
+
+	public Master(){
         ApplicationContext context = new ClassPathXmlApplicationContext( "beanConfiguration.xml" );
-        MainServiceBean mainServiceBean = (MainServiceBean)context.getBean( "mainServiceBean" );
+		ServicesControll servicesControll=new ServicesControll(context);
+		mainServiceBean = (MainServiceBean)context.getBean( "mainServiceBean" );
+
+		gui = new MainFrame();
+		currentAccount.addObserver( gui.getObserverComponent() );
+		gui.addALToLogButton( new LogButtAL( gui,new AccountCheck() ) );
 
 
-        AccountService accountService= mainServiceBean.getAccountService();
-        List<Account> list=accountService.getAll();
-
-        for(Account l:list){
-            System.out.println(l.getName());
-        }
-
-    }
+	}
 }

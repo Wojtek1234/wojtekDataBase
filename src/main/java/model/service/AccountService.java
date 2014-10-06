@@ -65,4 +65,71 @@ public class AccountService extends BaseService<Account,AccountDao> {
 		return returnOffers;
 
 	}
+
+	@Transactional
+	public Set<Offer> getOffersByAccount(long ID,int number){
+
+		Set<Offer> offers=accountDao.getById( ID ).getOffers();
+		Set<Offer> returnOffers=new HashSet<>(  );
+		int helpValue=0;
+		for(Offer off:offers){
+			returnOffers.add( off );
+			helpValue++;
+			if(helpValue==number) break;
+		}
+		return returnOffers;
+
+	}
+	@Transactional
+	public Set<Offer> getOffersByAccount(String name,int number){
+
+		Set<Offer> offers=accountDao.getByName( name ).getOffers();
+		Set<Offer> returnOffers=new HashSet<>(  );
+		int helpValue=0;
+		for(Offer off:offers){
+			returnOffers.add( off );
+			helpValue++;
+			if(helpValue==number) break;
+		}
+		return returnOffers;
+
+	}
+
+	@Transactional
+	public Set<Offer> getOffersByAccount(String name,int number,int startNumber){
+
+		Set<Offer> offers=accountDao.getByName( name ).getOffers();
+		Set<Offer> returnOffers=new HashSet<>(  );
+		int helpValue=0;
+		for(Offer off:offers){
+
+			if(helpValue<startNumber)helpValue++;
+			else{
+				helpValue++;
+				returnOffers.add( off );
+			}
+			if((helpValue-startNumber)==number) break;
+		}
+		return returnOffers;
+
+	}
+
+	@Transactional
+	public Set<Offer> getOffersByAccount(long ID,int number,int startNumber){
+
+		Set<Offer> offers=accountDao.getById( ID ).getOffers();
+		Set<Offer> returnOffers=new HashSet<>(  );
+		int helpValue=0;
+		for(Offer off:offers){
+
+			if(helpValue<startNumber)helpValue++;
+			else{
+				helpValue++;
+				returnOffers.add( off );
+			}
+			if((helpValue-startNumber)==number) break;
+		}
+		return returnOffers;
+
+	}
 }

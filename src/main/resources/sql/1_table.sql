@@ -25,7 +25,7 @@ ALTER TABLE account
   ALTER TABLE category
     OWNER TO postgres;
 
-    
+
 CREATE TABLE offer
 (
   offer_id bigint NOT NULL,
