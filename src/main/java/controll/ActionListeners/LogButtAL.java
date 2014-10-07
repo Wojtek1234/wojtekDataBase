@@ -22,14 +22,23 @@ public class LogButtAL implements ActionListener
 	}
 	@Override public void actionPerformed( ActionEvent actionEvent )
 	{
+		if(currentAccount.isLogged()){
+			currentAccount.setLogged( false );
+			currentAccount.logOff();
+		}else{
+			doWhenLogOut();
+		}
+
+	}
+
+	private void doWhenLogOut()
+	{
 		LogginDialog logginDialog=new LogginDialog( parent,accountCheck );
 		logginDialog.setModal( true );
 		logginDialog.setVisible( true );
 
 		if(logginDialog.isSucceeded()){
 			currentAccount.setAccountModel(logginDialog.getAccountModel());
-			
-
 		}
 	}
 }

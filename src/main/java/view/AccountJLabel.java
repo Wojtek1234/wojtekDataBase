@@ -1,5 +1,7 @@
 package view;
 
+import model.Accounts.CurrentAccount;
+
 import javax.swing.*;
 import java.util.Observable;
 import java.util.Observer;
@@ -18,13 +20,18 @@ public class AccountJLabel extends JLabel implements Observer
 
 	@Override public void update( Observable observable, Object o )
 	{
-		if(o instanceof String)
+		if(o instanceof CurrentAccount)
 		{
-			this.setText( "Hello "+(String)o );
-			this.button.setEnabled( true );
+
+			if(!((CurrentAccount)o).isLogged()){
+				this.button.setEnabled( false );
+				this.setText( "Hello Guest");
+			}else
+			{
+				this.setText( "Hello " + ((CurrentAccount)o).getName() );
+				this.button.setEnabled( true );
+			}
 		}
-		if(o.equals( null )){
-			this.button.setEnabled( false );
-		}
+
 	}
 }

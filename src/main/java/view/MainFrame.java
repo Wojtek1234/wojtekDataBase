@@ -3,6 +3,7 @@ package view;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.util.Observer;
 
 /**
@@ -10,17 +11,19 @@ import java.util.Observer;
  */
 public class MainFrame extends JFrame
 {
-	private final JButton logButton,createAccoutnButton,showByCategoryButton,showByAccountButton,showAllOffers,
+	private final JButton createAccoutnButton,showByCategoryButton,showByAccountButton,showAllOffers,
 			showNextButton,showPrevButton,
 			addOfferButton;
+	private LogingButton logingButton;
 	public AccountJLabel accountJLabel;
 	private final JTable tableOfOffers;
+	private ArrayList<Observer> accountObserverArrayList;
 
 	public MainFrame(){
 
 
 
-		this.logButton=new JButton( "Log in" );
+		this.logingButton=new LogingButton( "Log in" );
 		this.createAccoutnButton =new JButton("Create Account");
 		this.showByCategoryButton=new JButton( "Show By Category" );
 		this.showByAccountButton=new JButton( "Show By Account" );
@@ -30,6 +33,9 @@ public class MainFrame extends JFrame
 		this.addOfferButton=new JButton( "Add Offer" );
 		this.tableOfOffers=new JTable();
 		this.accountJLabel=new AccountJLabel("Not logged", addOfferButton);
+		accountObserverArrayList=new ArrayList<>(  );
+		accountObserverArrayList.add( logingButton );
+		accountObserverArrayList.add( accountJLabel );
 		JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT);
 		splitPane.setLeftComponent( createLeftPanel() );
 		JSplitPane splitPane2 = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT);
@@ -55,7 +61,7 @@ public class MainFrame extends JFrame
 	private void addButtons( JPanel lewyPanel )
 	{
 		JPanel panel=new JPanel(new GridLayout(0,3  ));
-		panel.add(logButton);
+		panel.add(logingButton);
 		panel.add(accountJLabel);
 		panel.add(createAccoutnButton);
 		lewyPanel.add( panel );
@@ -67,10 +73,10 @@ public class MainFrame extends JFrame
 	}
 
 	public void addALToLogButton(ActionListener al){
-		this.addActionListenerToButton( al,logButton);
+		this.addActionListenerToButton( al,logingButton);
 	}
 	public void addALToCreateAccountBut(ActionListener al){
-		this.addActionListenerToButton( al,logButton);
+		this.addActionListenerToButton( al,logingButton);
 	}
 	public void addALToViewByCategory(ActionListener al){this.addActionListenerToButton( al,showByCategoryButton);}
 	public void addALToViewByAccount(ActionListener al){this.addActionListenerToButton( al,showByAccountButton);};
@@ -84,7 +90,7 @@ public class MainFrame extends JFrame
 		jbut.addActionListener( al );
 	}
 
-	public Observer getObserverComponent(){
-		return this.accountJLabel;
+	public ArrayList<Observer> getObserverComponent(){
+		return accountObserverArrayList;
 	}
 }

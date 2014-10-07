@@ -44,9 +44,26 @@ public class CurrentAccount extends Observable
 	public void setAccountModel( AccountModel accountModel )
 	{
 		this.accountModel=accountModel;
-		setChanged();
-		this.notifyObservers(accountModel.getName());
+		this.isLogged=true;
+		updateObservers();
 	}
 
+	public String getName(){
+		return this.accountModel.getName();
+	}
+
+	public void logOff(){
+		this.isLogged=false;
+		this.accountModel=new AccountModel( null );
+		updateObservers();
+
+	}
+
+	private void updateObservers()
+	{
+		setChanged();
+		this.notifyObservers(this);
+
+	}
 
 }

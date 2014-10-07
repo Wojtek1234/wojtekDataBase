@@ -10,6 +10,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import view.MainFrame;
 import controll.ActionListeners.LogButtAL;
 
+import java.util.Observer;
+
 /**
  * Created by w.maciejewski on 2014-09-29.
  */
@@ -25,7 +27,10 @@ public class Master {
 		mainServiceBean = (MainServiceBean)context.getBean( "mainServiceBean" );
 
 		gui = new MainFrame();
-		currentAccount.addObserver( gui.getObserverComponent() );
+		for( Observer observer:gui.getObserverComponent()){
+			currentAccount.addObserver(observer);
+		}
+
 		gui.addALToLogButton( new LogButtAL( gui,new AccountCheck(mainServiceBean.getAccountService().getAll()) ) );
 
 
