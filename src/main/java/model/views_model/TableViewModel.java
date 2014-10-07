@@ -10,6 +10,8 @@ import java.util.Observable;
 public class TableViewModel extends Observable
 {
 	private OfferTableModel offerTableModel;
+	private int current_number=0;
+	private int showAtOnce=10;
 
 
 
@@ -30,4 +32,23 @@ public class TableViewModel extends Observable
 		this.notifyObservers(offerTableModel);
 	}
 
+	public int getCurrent_number()
+	{
+		return current_number;
+	}
+
+	public void setCurrent_number( int current_number )
+	{
+		this.current_number = current_number;
+	}
+
+	public int getShowAtOnce()
+	{
+		return showAtOnce;
+	}
+
+	public void setShowAtOnce( int showAtOnce )
+	{
+		this.showAtOnce = showAtOnce;
+	}
 }

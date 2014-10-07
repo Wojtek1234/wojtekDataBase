@@ -34,13 +34,19 @@ public class ShowByCategoryAL implements ActionListener
 		categoryDialog.setVisible( true );
 
 		if(categoryDialog.doProceed()){
-			OfferTableModel offerTableModel=new OfferTableModel(servicesControll.getOffersByCategory(  categoryDialog
-					.getCategoryString() ) );
-			tableViewModel.setOfferTableModel( offerTableModel );
+
+			proccedToTable( categoryDialog );
 		}
 
 	}
 
+	private void proccedToTable( CategoryDialogChooser categoryDialog )
+	{
 
+		OfferTableModel offerTableModel=new OfferTableModel(servicesControll.getOffersByCategory( categoryDialog
+				.getCategoryString(), tableViewModel.getCurrent_number(), tableViewModel.getShowAtOnce() ));
+
+		tableViewModel.setOfferTableModel( offerTableModel );
+	}
 
 }

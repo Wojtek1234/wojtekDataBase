@@ -40,6 +40,9 @@ public class ServicesControll
 	public ArrayList<Offer> getOffersByCategory( String name ){
 		return new ArrayList<Offer>( categoryService.getOffersByCategory(name) );
 	}
+	public ArrayList<Offer> getOffersByCategory( String name,int pocz,int ilosc ){
+		return new ArrayList<Offer>( categoryService.getOffersByCategory(name,pocz,ilosc) );
+	}
 
 
 
