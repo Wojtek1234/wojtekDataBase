@@ -1,4 +1,4 @@
-package model;
+package model.Accounts;
 
 import javax.swing.*;
 import java.awt.*;
@@ -15,6 +15,7 @@ public class LogginDialog extends JDialog
 	private JButton btnLogin;
 	private JButton btnCancel;
 	private boolean succeeded;
+	private AccountModel accountModel;
 
 	public  LogginDialog( JFrame frame,final AccountCheck accountCheck){
 		super(frame);
@@ -41,7 +42,10 @@ public class LogginDialog extends JDialog
 		btnLogin.addActionListener(new ActionListener() {
 
 			public void actionPerformed(ActionEvent e) {
-				if (accountCheck.authenticate(getUsername())) {
+				 accountModel=new AccountModel(getUsername());
+
+
+				if (accountCheck.authenticate(accountModel)){
 					JOptionPane.showMessageDialog(LogginDialog.this,
 							"Hi " + getUsername() + "! You have successfully logged in.",
 							"Login",
@@ -80,13 +84,18 @@ public class LogginDialog extends JDialog
 		setLocationRelativeTo(frame);
 	}
 
-	public String getUsername() {
+	private String getUsername() {
 		return textFieldUserName.getText().trim();
 	}
 
 
 	public boolean isSucceeded() {
 		return succeeded;
+	}
+
+	public AccountModel getAccountModel( )
+	{
+		return this.accountModel;
 	}
 }
 

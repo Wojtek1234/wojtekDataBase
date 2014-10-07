@@ -1,4 +1,4 @@
-package model;
+package model.Accounts;
 
 import java.util.Observable;
 
@@ -10,7 +10,7 @@ public class CurrentAccount extends Observable
 	private static volatile CurrentAccount instance = null;
 
 	private boolean isLogged=false;
-	private String accountName;
+	private AccountModel accountModel;
 
 	private CurrentAccount() {
 	}
@@ -36,17 +36,16 @@ public class CurrentAccount extends Observable
 		this.isLogged = isLogged;
 	}
 
-	public String getAccountName()
+	public AccountModel getAccountModel()
 	{
-		return accountName;
+		return accountModel;
 	}
 
-	public void setAccountName( String accountName )
+	public void setAccountModel( AccountModel accountModel )
 	{
-
-		this.accountName = accountName;
+		this.accountModel=accountModel;
 		setChanged();
-		this.notifyObservers(accountName);
+		this.notifyObservers(accountModel.getName());
 	}
 
 

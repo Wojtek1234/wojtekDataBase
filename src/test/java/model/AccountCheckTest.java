@@ -1,5 +1,7 @@
 package model;
 
+import model.Accounts.AccountCheck;
+import model.Accounts.AccountModel;
 import model.service.AccountService;
 import model.service.MainServiceBean;
 import org.junit.After;
@@ -48,8 +50,11 @@ public class AccountCheckTest extends AbstractJUnit4SpringContextTests
 		mainServiceBean.getAccountService().create( "konto3" );
 
 		AccountCheck accountCheck=new AccountCheck(mainServiceBean.getAccountService().getAll());
-		assertTrue( accountCheck.authenticate( "konto1" ) );
-		assertTrue( !accountCheck.authenticate( "dupa" ) );
+		AccountModel accountModel=new AccountModel( "konto1"  );
+		AccountModel accountModel1=new AccountModel( "dupa"  );
+
+		assertTrue( accountCheck.authenticate( accountModel) );
+		assertTrue( !accountCheck.authenticate(accountModel1) );
 
 	}
 

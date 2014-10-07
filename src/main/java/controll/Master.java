@@ -1,7 +1,7 @@
 package controll;
 
-import model.AccountCheck;
-import model.CurrentAccount;
+import model.Accounts.AccountCheck;
+import model.Accounts.CurrentAccount;
 import model.service.MainServiceBean;
 
 import org.springframework.context.ApplicationContext;
@@ -26,7 +26,7 @@ public class Master {
 
 		gui = new MainFrame();
 		currentAccount.addObserver( gui.getObserverComponent() );
-		gui.addALToLogButton( new LogButtAL( gui,new AccountCheck() ) );
+		gui.addALToLogButton( new LogButtAL( gui,new AccountCheck(mainServiceBean.getAccountService().getAll()) ) );
 
 
 	}

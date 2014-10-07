@@ -1,8 +1,8 @@
 package controll.ActionListeners;
 
-import model.AccountCheck;
-import model.CurrentAccount;
-import model.LogginDialog;
+import model.Accounts.AccountCheck;
+import model.Accounts.CurrentAccount;
+import model.Accounts.LogginDialog;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -27,8 +27,8 @@ public class LogButtAL implements ActionListener
 		logginDialog.setVisible( true );
 
 		if(logginDialog.isSucceeded()){
-
-			currentAccount.setAccountName( logginDialog.getUsername() );
+			currentAccount.setAccountModel(logginDialog.getAccountModel());
+			
 
 		}
 	}
