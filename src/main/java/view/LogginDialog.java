@@ -1,4 +1,7 @@
-package model.Accounts;
+package view;
+
+import model.Accounts.AccountCheck;
+import model.Accounts.AccountModel;
 
 import javax.swing.*;
 import java.awt.*;

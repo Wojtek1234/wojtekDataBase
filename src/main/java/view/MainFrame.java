@@ -16,7 +16,7 @@ public class MainFrame extends JFrame
 			addOfferButton;
 	private LogingButton logingButton;
 	public AccountJLabel accountJLabel;
-	private final JTable tableOfOffers;
+	private  TableOfOffers tableOfOffers;
 	private ArrayList<Observer> accountObserverArrayList;
 
 	public MainFrame(){
@@ -31,7 +31,7 @@ public class MainFrame extends JFrame
 		this.showNextButton=new JButton(">>");
 		this.showPrevButton=new JButton("<<");
 		this.addOfferButton=new JButton( "Add Offer" );
-		this.tableOfOffers=new JTable();
+		this.tableOfOffers=new TableOfOffers();
 		this.accountJLabel=new AccountJLabel("Not logged", addOfferButton);
 		accountObserverArrayList=new ArrayList<>(  );
 		accountObserverArrayList.add( logingButton );
@@ -39,7 +39,7 @@ public class MainFrame extends JFrame
 		JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT);
 		splitPane.setLeftComponent( createLeftPanel() );
 		JSplitPane splitPane2 = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT);
-		splitPane2.setLeftComponent( tableOfOffers );
+		splitPane2.setLeftComponent(new JScrollPane(tableOfOffers  ) );
 		splitPane.setRightComponent( splitPane2 );
 
 		this.add( splitPane );
@@ -92,5 +92,9 @@ public class MainFrame extends JFrame
 
 	public ArrayList<Observer> getObserverComponent(){
 		return accountObserverArrayList;
+	}
+
+	public Observer getTableObserver(){
+		return this.tableOfOffers;
 	}
 }

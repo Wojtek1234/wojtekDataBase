@@ -1,14 +1,14 @@
 package controll;
 
+import controll.ActionListeners.LogButtAL;
+import controll.ActionListeners.ShowByCategoryAL;
 import model.Accounts.AccountCheck;
 import model.Accounts.CurrentAccount;
 import model.service.MainServiceBean;
-
+import model.views_model.TableViewModel;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-
 import view.MainFrame;
-import controll.ActionListeners.LogButtAL;
 
 import java.util.Observer;
 
@@ -20,6 +20,9 @@ public class Master {
 	private final MainServiceBean mainServiceBean;
 	private final MainFrame gui;
 	private final CurrentAccount currentAccount=CurrentAccount.getInstance();
+	private TableViewModel tableViewModel;
+	private LogButtAL logButtAL;
+	private ShowByCategoryAL showByCategoryAL;
 
 	public Master(){
         ApplicationContext context = new ClassPathXmlApplicationContext( "beanConfiguration.xml" );
@@ -31,8 +34,16 @@ public class Master {
 			currentAccount.addObserver(observer);
 		}
 
-		gui.addALToLogButton( new LogButtAL( gui,new AccountCheck(mainServiceBean.getAccountService().getAll()) ) );
+		tableViewModel=new TableViewModel();
+		tableViewModel.addObserver( gui.getTableObserver() );
 
+
+		logButtAL=new LogButtAL( gui,new AccountCheck(mainServiceBean.getAccountService().getAll()) );
+		gui.addALToLogButton( logButtAL );
+
+
+		showByCategoryAL=new ShowByCategoryAL(gui,servicesControll,tableViewModel);
+		gui.addALToViewByCategory(  showByCategoryAL);
 
 	}
 }

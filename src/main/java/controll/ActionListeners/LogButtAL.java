@@ -2,7 +2,7 @@ package controll.ActionListeners;
 
 import model.Accounts.AccountCheck;
 import model.Accounts.CurrentAccount;
-import model.Accounts.LogginDialog;
+import view.LogginDialog;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -40,5 +40,10 @@ public class LogButtAL implements ActionListener
 		if(logginDialog.isSucceeded()){
 			currentAccount.setAccountModel(logginDialog.getAccountModel());
 		}
+	}
+
+	public void setAccountCheck( AccountCheck accountCheck )
+	{
+		this.accountCheck = accountCheck;
 	}
 }
