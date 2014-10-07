@@ -96,7 +96,7 @@ public class AccountService extends BaseService<Account,AccountDao> {
 	}
 
 	@Transactional
-	public Set<Offer> getOffersByAccount(String name,int number,int startNumber){
+	public Set<Offer> getOffersByAccount(String name,int startNumber,int number){
 
 		Set<Offer> offers=accountDao.getByName( name ).getOffers();
 		Set<Offer> returnOffers=new HashSet<>(  );
@@ -115,7 +115,7 @@ public class AccountService extends BaseService<Account,AccountDao> {
 	}
 
 	@Transactional
-	public Set<Offer> getOffersByAccount(long ID,int number,int startNumber){
+	public Set<Offer> getOffersByAccount(long ID,int startNumber,int number){
 
 		Set<Offer> offers=accountDao.getById( ID ).getOffers();
 		Set<Offer> returnOffers=new HashSet<>(  );

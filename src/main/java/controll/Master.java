@@ -1,5 +1,6 @@
 package controll;
 
+import controll.ActionListeners.AddOfferAL;
 import controll.ActionListeners.LogButtAL;
 import controll.ActionListeners.ShowByCategoryAL;
 import model.Accounts.AccountCheck;
@@ -23,6 +24,7 @@ public class Master {
 	private TableViewModel tableViewModel;
 	private LogButtAL logButtAL;
 	private ShowByCategoryAL showByCategoryAL;
+	private AddOfferAL addOfferAL;
 
 	public Master(){
         ApplicationContext context = new ClassPathXmlApplicationContext( "beanConfiguration.xml" );
@@ -44,6 +46,9 @@ public class Master {
 
 		showByCategoryAL=new ShowByCategoryAL(gui,servicesControll,tableViewModel);
 		gui.addALToViewByCategory(  showByCategoryAL);
+
+		addOfferAL=new AddOfferAL( gui,servicesControll );
+		gui.addALToAddOffer( addOfferAL );
 
 	}
 }

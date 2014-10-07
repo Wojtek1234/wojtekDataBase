@@ -89,7 +89,7 @@ public class CategoryService extends BaseService<Category,CategoryDao>{
 	}
 
 	@Transactional
-	public Set<Offer> getOffersByCategory(String name,int number,int startNumber){
+	public Set<Offer> getOffersByCategory(String name,int startNumber,int number){
 
 		Set<Offer> offers=categoryDao.getByName( name ).getOffers();
 		Set<Offer> returnOffers=new HashSet<>(  );
@@ -108,7 +108,7 @@ public class CategoryService extends BaseService<Category,CategoryDao>{
 	}
 
 	@Transactional
-	public Set<Offer> getOffersByCategory(long ID,int number,int startNumber){
+	public Set<Offer> getOffersByCategory(long ID,int startNumber,int number ){
 
 		Set<Offer> offers=categoryDao.getById( ID ).getOffers();
 		Set<Offer> returnOffers=new HashSet<>(  );
