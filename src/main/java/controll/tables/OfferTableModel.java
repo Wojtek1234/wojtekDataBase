@@ -48,7 +48,9 @@ public class OfferTableModel extends AbstractTableModel
 		}
 		return  null;
 	}
-
+	public Offer getOfferAtPosition(int row){
+		return this.offerList.get( row );
+	}
 	@Override
 	public String getColumnName( int columnIndex )
 	{
@@ -72,4 +74,8 @@ public class OfferTableModel extends AbstractTableModel
 		return null;
 	}
 
+	public List<Offer> getOfferList()
+	{
+		return offerList;
+	}
 }

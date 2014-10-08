@@ -1,6 +1,7 @@
 package model.views_model;
 
 import controll.tables.OfferTableModel;
+import view.MainFrame;
 
 import java.util.Observable;
 
@@ -12,8 +13,12 @@ public class TableViewModel extends Observable
 	private OfferTableModel offerTableModel;
 	private int current_number=0;
 	private int showAtOnce=10;
+	private MainFrame gui;
 
-
+	public TableViewModel( MainFrame gui )
+	{
+		this.gui=gui;
+	}
 
 	public OfferTableModel getOfferTableModel()
 	{
@@ -23,6 +28,7 @@ public class TableViewModel extends Observable
 	public void setOfferTableModel( OfferTableModel offerTableModel )
 	{
 		this.offerTableModel = offerTableModel;
+
 		updateObserver();
 	}
 

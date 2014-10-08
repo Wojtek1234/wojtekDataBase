@@ -3,9 +3,11 @@ package controll;
 import controll.ActionListeners.AddOfferAL;
 import controll.ActionListeners.LogButtAL;
 import controll.ActionListeners.ShowByCategoryAL;
+import controll.tableListener.TableSelectionListener;
 import model.Accounts.AccountCheck;
 import model.Accounts.CurrentAccount;
 import model.service.MainServiceBean;
+import model.views_model.OfferViewModel;
 import model.views_model.TableViewModel;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -25,6 +27,8 @@ public class Master {
 	private LogButtAL logButtAL;
 	private ShowByCategoryAL showByCategoryAL;
 	private AddOfferAL addOfferAL;
+	private OfferViewModel offerViewModel;
+	private TableSelectionListener selectionListener;
 
 	public Master(){
         ApplicationContext context = new ClassPathXmlApplicationContext( "beanConfiguration.xml" );
@@ -36,9 +40,15 @@ public class Master {
 			currentAccount.addObserver(observer);
 		}
 
-		tableViewModel=new TableViewModel();
-		tableViewModel.addObserver( gui.getTableObserver() );
+		this.tableViewModel =new TableViewModel(gui);
 
+		this.tableViewModel.addObserver( gui.getTableObserver() );
+
+		this.offerViewModel =new OfferViewModel();
+		selectionListener = new TableSelectionListener(offerViewModel);
+		this.tableViewModel.addObserver( this.selectionListener );
+		this.offerViewModel.addObserver( gui.getOfferModelObserver() );
+		this.gui.setListSelectionListener( this.selectionListener );
 
 		logButtAL=new LogButtAL( gui,new AccountCheck(mainServiceBean.getAccountService().getAll()) );
 		gui.addALToLogButton( logButtAL );

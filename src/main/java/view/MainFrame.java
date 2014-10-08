@@ -1,6 +1,9 @@
 package view;
 
+import view.offerpanels.OfferPanel;
+
 import javax.swing.*;
+import javax.swing.event.ListSelectionListener;
 import java.awt.*;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -14,10 +17,12 @@ public class MainFrame extends JFrame
 	private final JButton createAccoutnButton,showByCategoryButton,showByAccountButton,showAllOffers,
 			showNextButton,showPrevButton,
 			addOfferButton;
+	private final ListSelectionModel cellSelectionModel;
 	private LogingButton logingButton;
 	public AccountJLabel accountJLabel;
 	private  TableOfOffers tableOfOffers;
 	private ArrayList<Observer> accountObserverArrayList;
+	private OfferPanel offerPanel;
 
 	public MainFrame(){
 
@@ -40,6 +45,11 @@ public class MainFrame extends JFrame
 		splitPane.setLeftComponent( createLeftPanel() );
 		JSplitPane splitPane2 = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT);
 		splitPane2.setLeftComponent(new JScrollPane(tableOfOffers  ) );
+		cellSelectionModel = tableOfOffers.getSelectionModel();
+		cellSelectionModel.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+
+		this.offerPanel=new OfferPanel(  );
+		splitPane2.setRightComponent( offerPanel );
 		splitPane.setRightComponent( splitPane2 );
 
 		this.add( splitPane );
@@ -84,7 +94,9 @@ public class MainFrame extends JFrame
 	public void addALToAddOffer(ActionListener al){this.addActionListenerToButton( al,addOfferButton );}
 	public void addALToShowNext(ActionListener al){this.addActionListenerToButton( al,showNextButton );}
 	public void addALToShowPrev(ActionListener al){this.addActionListenerToButton( al,showPrevButton );}
-
+	public void setListSelectionListener(ListSelectionListener lsl){
+		cellSelectionModel.addListSelectionListener( lsl );
+	}
 
 	private void addActionListenerToButton(ActionListener al,JButton jbut){
 		jbut.addActionListener( al );
@@ -96,5 +108,13 @@ public class MainFrame extends JFrame
 
 	public Observer getTableObserver(){
 		return this.tableOfOffers;
+	}
+	public Observer getOfferModelObserver(){
+		return this.offerPanel;
+	}
+	public void setOfferPanel( OfferPanel offerPanel )
+	{
+		this.offerPanel = offerPanel;
+		this.revalidate();
 	}
 }

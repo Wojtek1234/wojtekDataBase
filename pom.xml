@@ -84,6 +84,11 @@
             <artifactId>glazedlists_java15</artifactId>
             <version>1.9.0</version>
         </dependency>
+        <dependency>
+            <groupId>tablelayout</groupId>
+            <artifactId>TableLayout</artifactId>
+            <version>20050920</version>
+        </dependency>
 
     </dependencies>
 
