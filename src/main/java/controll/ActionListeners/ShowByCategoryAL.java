@@ -22,13 +22,19 @@ public class ShowByCategoryAL implements ActionListener
 	public ShowByCategoryAL( JFrame parent, ServicesControll servicesControll, TableViewModel tableViewModel ){
 		this.parent=parent;
 		this.servicesControll=servicesControll;
-		CreateArrayOfCatNames createArrayOfCatNames=new CreateArrayOfCatNames(servicesControll.getCategorys());
-		this.categorys=createArrayOfCatNames.getStrings();
+		createCategorys( servicesControll );
 		this.tableViewModel=tableViewModel;
+	}
+
+	private String[] createCategorys( ServicesControll servicesControll )
+	{
+		CreateArrayOfCatNames createArrayOfCatNames=new CreateArrayOfCatNames(servicesControll.getCategorys());
+		return createArrayOfCatNames.getStrings();
 	}
 
 	@Override public void actionPerformed( ActionEvent actionEvent )
 	{
+		this.categorys=createCategorys(servicesControll);
 		CategoryDialogChooser categoryDialog=new CategoryDialogChooser( parent,categorys );
 		categoryDialog.setModal( true );
 		categoryDialog.setVisible( true );

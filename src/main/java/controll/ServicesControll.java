@@ -1,5 +1,7 @@
 package controll;
 
+import model.OfferCreateModel.OfferTemplate;
+import model.entity.Account;
 import model.entity.Category;
 import model.entity.Offer;
 import model.service.AccountService;
@@ -43,13 +45,21 @@ public class ServicesControll
 	public ArrayList<Offer> getOffersByCategory( String name,int pocz,int ilosc ){
 		return new ArrayList<Offer>( categoryService.getOffersByCategory(name,pocz,ilosc) );
 	}
+	
+	
+	public void createOffer(String accountName,OfferTemplate offerTemplate){
+		Account account=accountService.getByName( accountName );
+		Category category=categoryService.getByName( offerTemplate.getCategoryName() );
+		offerService.create(offerTemplate.getOfferName(),account,category,offerTemplate.getDate(),
+				offerTemplate.getPrice(),
+				offerTemplate.getImage() );
 
+	}
 
-
-
-
-
-
+	public void createCategory( String name )
+	{
+		categoryService.create( name );
+	}
 
 
 }

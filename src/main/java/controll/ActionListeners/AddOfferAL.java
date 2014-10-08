@@ -33,5 +33,21 @@ public class AddOfferAL implements ActionListener
 		AddOfferDialog addOfferDialog=new AddOfferDialog( this.parent,this.categorys );
 		addOfferDialog.setModal( true );
 		addOfferDialog.setVisible( true );
+
+		if(addOfferDialog.isSucces()){
+			checkNewCats( addOfferDialog );
+			servicesControll.createOffer( currentAccount.getName(),addOfferDialog.getOfferTemplate() );
+		}
+	}
+
+	private void checkNewCats( AddOfferDialog addOfferDialog )
+	{
+		String[] newCats=addOfferDialog.getListOfCategory();
+		if(!newCats.equals( this.categorys )){
+
+			for(int i=categorys.length;i<newCats.length;i++){
+				servicesControll.createCategory(newCats[i]);
+			}
+		}
 	}
 }
